@@ -1,0 +1,16 @@
+# editor
+.idea
+.vscode
+
+
+# OS
+.DS_Store
+
+# wordpress default themes
+wp-content/themes/twentytwenty/
+wp-content/themes/twentytwentyone/
+wp-content/themes/twentynineteen/
+
+# wordpress default plugins
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
