@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import PostCard from '@/components/Post/Card';
+import PostCard from '@/components/News/Card';
 
 export default {
   name: 'PostList',

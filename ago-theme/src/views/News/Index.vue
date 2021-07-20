@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import PostList from '@/components/Post/List';
-import BreadList from '@/components/Post/BreadList';
+import PostList from '@/components/News/List';
+import BreadList from '@/components/News/BreadList';
 
 export default {
-  name: 'Post',
+  name: 'PostIndex',
   components: {
     PostList,
     BreadList
