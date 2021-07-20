@@ -108,3 +108,43 @@ if (!function_exists('register_rest_format_date')) {
     }
 }
 add_action('rest_api_init', 'register_rest_format_date');
+
+
+// Create Custom Pot type
+function create_post_type() {
+    $concertSupports = [
+      'title',
+      'editor',
+      'thumbnail',
+      'revisions'
+    ];
+
+    // add post type
+    register_post_type( 'concerts',
+      array(
+        'label' => 'Concerts',
+        'public' => true,
+        'has_archive' => true,
+        'menu_position' => 5,
+        'show_in_rest' => true,
+        'rest_base' => 'concerts',
+        'supports' => $concertSupports
+      )
+    );
+
+    // add taxonomy
+    register_taxonomy(
+      'concert_taxonomy',
+      'category',
+      array(
+        'label' => 'category',
+        'labels' => array(
+          'all_items' => 'categories',
+          'add_new_item' => 'Add New Category'
+        ),
+        'hierarchical' => true
+      )
+    );
+  }
+
+  add_action( 'init', 'create_post_type' );
