@@ -7,7 +7,7 @@ import NewsDetail from '@/views/News/Detail';
 import ConcertIndex from '@/views/Concerts/Index';
 import ConcertDetail from '@/views/Concerts/Detail';
 import Contact from '@/views/Contact';
-import Instructor from '@/views/Instructor';
+import Instructors from '@/views/Instructors';
 
 Vue.use(Router);
 
@@ -41,7 +41,7 @@ export default new Router({
     },
     {
       path: '/instructors/',
-      component: Instructor
+      component: Instructors
     },
     {
       path: '/contact/',
