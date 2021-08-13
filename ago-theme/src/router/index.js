@@ -30,7 +30,7 @@ export default new Router({
     {
       path: '/posts/:id',
       component: PostDetail
-    }
+    },
     {
       path: '/concerts/',
       component: ConcertIndex
