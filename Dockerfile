@@ -7,7 +7,7 @@ RUN apt-get install -y nodejs
 RUN npm install npm@latest -g
 RUN npm install yarn -g
 
-WORKDIR /www/html/wp-content/themes/ago-theme
+WORKDIR /var/www/html/wp-content/themes/ago-theme
 COPY ./ago-theme/package.json ./
 RUN yarn install
 CMD [ "yarn", "build:dev" ]
