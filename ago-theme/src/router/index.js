@@ -2,8 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Top from '@/views/Top';
 import About from '@/views/About';
-import PostIndex from '@/views/News/Index';
-import PostDetail from '@/views/News/Detail';
+import NewsIndex from '@/views/News/Index';
+import NewsDetail from '@/views/News/Detail';
 import ConcertIndex from '@/views/Concerts/Index';
 import ConcertDetail from '@/views/Concerts/Detail';
 import Contact from '@/views/Contact';
@@ -24,12 +24,12 @@ export default new Router({
       component: About
     },
     {
-      path: '/posts/',
-      component: PostIndex
+      path: '/news/',
+      component: NewsIndex
     },
     {
-      path: '/posts/:id',
-      component: PostDetail
+      path: '/news/:id',
+      component: NewsDetail
     },
     {
       path: '/concerts/',
@@ -47,5 +47,5 @@ export default new Router({
       path: '/contact/',
       component: Contact
     }
-]
+  ]
 });
