@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import PostContent from '@/components/Post/Content';
-import BreadList from '@/components/Post/BreadList';
+import PostContent from '@/components/News/Content';
+import BreadList from '@/components/News/BreadList';
 
 export default {
   name: 'PostDetail',
