@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Top Page</h1>
     <hero-area />
     <top-news-list />
     <top-concert-list />

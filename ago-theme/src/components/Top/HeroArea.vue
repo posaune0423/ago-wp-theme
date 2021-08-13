@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hero Image</h1>
+    <img src="@/assets/images/hero_image.jpeg" alt="">
   </div>
 </template>
 
