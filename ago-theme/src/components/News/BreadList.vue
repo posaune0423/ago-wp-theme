@@ -9,7 +9,7 @@
       </li>
       <li>
         <router-link to="/posts/">
-          Posts
+          News
         </router-link>
         <span class="mx-2"> > </span>
       </li>

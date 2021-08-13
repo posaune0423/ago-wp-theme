@@ -22,8 +22,8 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-title>
-            <router-link to="/posts/">
-              Posts
+            <router-link to="/news/">
+              News
             </router-link>
           </v-list-item-title>
         </v-list-item>
