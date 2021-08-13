@@ -15,7 +15,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-title>
-            <router-link to="/about">
+            <router-link to="/about/">
               About
             </router-link>
           </v-list-item-title>
@@ -24,6 +24,20 @@
           <v-list-item-title>
             <router-link to="/news/">
               News
+            </router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title>
+            <router-link to="/instructors/">
+              Instructors
+            </router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title>
+            <router-link to="/contact/">
+              Contact
             </router-link>
           </v-list-item-title>
         </v-list-item>
