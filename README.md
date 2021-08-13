@@ -33,7 +33,7 @@ then automatically apache web server start on http://localhost:8000
 ## 2. Inside the container, build files by webpack
 
 ```bash
-$ docker compose exec wordpress bash -c "cd wp-content/themes/sample-theme && yarn build:dev"
+$ docker compose exec wordpress bash -c "cd wp-content/themes/ago-theme && yarn build:dev"
 # Or just in your host OS
 $ yarn build:dev
 ```
