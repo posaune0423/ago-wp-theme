@@ -10,4 +10,4 @@ RUN npm install yarn -g
 WORKDIR /var/www/html/wp-content/themes/ago-theme
 COPY ./ago-theme/package.json ./
 RUN yarn install
-CMD [ "yarn", "build:dev" ]
+# CMD [ "yarn", "build:dev" ]
