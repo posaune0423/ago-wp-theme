@@ -8,13 +8,13 @@
         <span class="mx-2"> > </span>
       </li>
       <li>
-        <router-link to="/posts/">
+        <router-link to="/news/">
           News
         </router-link>
         <span class="mx-2"> > </span>
       </li>
       <li v-if="title">
-        <router-link :to="`/posts/${this.$route.params.id}`">
+        <router-link :to="`/news/${this.$route.params.id}`">
           {{ title }}
         </router-link>
       </li>
