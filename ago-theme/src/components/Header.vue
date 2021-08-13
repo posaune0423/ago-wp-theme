@@ -43,7 +43,7 @@
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-toolbar-title>Header</v-toolbar-title>
+    <v-toolbar-title>AGO Sample Theme</v-toolbar-title>
   </v-app-bar>
 </template>
 

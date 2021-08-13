@@ -1,24 +1,28 @@
 <template>
   <div>
-    <img alt="Vue logo" src="../assets/images/logo.png" />
     <h1>Top Page</h1>
-    <counter />
-    <router-link to="/about">about</router-link>
+    <hero-area />
+    <top-news-list />
+    <top-concert-list />
+    <youtube-area />
   </div>
 </template>
 
 <script>
-import Counter from '@/components/Counter';
+import TopConcertList from '@/components/Top/ConcertList';
+import TopNewsList from '@/components/Top/NewsList';
+import YoutubeArea from '@/components/Top/YoutubeArea';
+import HeroArea from '@/components/Top/HeroArea';
+
 export default {
-  name: 'Top',
+  name: 'TopPage',
   components: {
-    Counter
+    TopConcertList,
+    TopNewsList,
+    YoutubeArea,
+    HeroArea
   }
 };
 </script>
 
-<style lang="scss" scoped>
-h1 {
-  color: $c_red;
-}
-</style>
+<style lang="scss" scoped></style>
