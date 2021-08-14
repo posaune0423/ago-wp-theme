@@ -12,13 +12,13 @@
         </router-link>
       </div>
       <ul>
-        <li><router-link to="/about/">About</router-link></li>
-        <li><router-link to="/concerts/">Concerts</router-link></li>
-        <li><router-link to="/instructors/">Instructors</router-link></li>
+        <li><router-link to="/about/">ABOUT</router-link></li>
+        <li><router-link to="/concerts/">CONCERTS</router-link></li>
+        <li><router-link to="/instructors/">INSTRUCTORS</router-link></li>
         <li>
-          <a href="https://agonew2019.wixsite.com/2020-ago-new">Looking for</a>
+          <a href="https://agonew2019.wixsite.com/2020-ago-new">WELCOME</a>
         </li>
-        <li><router-link to="/contact/">Contact</router-link></li>
+        <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
     </nav>
   </div>
@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 nav {
   top: 0;
-  height: 83px;
+  height: $h_header;
   background: #fff;
   width: 100%;
   position: fixed;
@@ -48,12 +48,13 @@ nav {
   padding: 0 16px 0 0;
   box-sizing: border-box;
   z-index: 1;
-//   box-shadow: 0 10px 10px -12px #676767;
 
   a {
     padding-left: 16px;
     padding-right: 32px;
-    color: #111;
+    color: #343434;
+    font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
   }
   ul {
@@ -91,7 +92,7 @@ nav {
   height: 100%;
   line-height: 1;
   font-size: 28px;
-  color: #111;
+  color: #343434;
   /* display: none; */
   align-items: center;
   z-index: 3;

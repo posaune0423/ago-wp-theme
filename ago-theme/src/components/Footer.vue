@@ -8,7 +8,7 @@
         <li><router-link to="/instructors/">Instructors</router-link></li>
         <li><router-link to="/concerts/">Concerts</router-link></li>
         <li>
-          <a href="https://agonew2019.wixsite.com/2020-ago-new">Looking for</a>
+          <a href="https://agonew2019.wixsite.com/2020-ago-new">Welcome</a>
         </li>
         <li><router-link to="/contact/">Contact</router-link></li>
       </ul>
