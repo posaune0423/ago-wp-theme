@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="section-heading">Contact Us</h1>
+    <lower-header title="CONTACT" subtitle="お問い合わせ" />
     <div class="container">
       <form id="form1" class="wpcf7-form" method="post">
         <div style="display: none">
@@ -103,8 +103,13 @@
 
 <script>
 import axios from 'axios';
+import LowerHeader from '@/components/molecules/LowerHeader';
+
 export default {
   name: 'Contact',
+  components: {
+    LowerHeader
+  },
   mounted() {
     console.log('mounted');
   },

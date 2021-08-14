@@ -1,7 +1,6 @@
 <template>
-  <div class="about">
-    <h1 class="section-heading">About Us</h1>
-
+  <div>
+    <lower-header title="ABOUT" subtitle="私達について" />
     <div class="card">
       <img src="@/assets/images/about_cover.jpeg" />
       <div class="card-info">
@@ -65,6 +64,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import LowerHeader from '@/components/molecules/LowerHeader';
+
+export default {
+  name: 'AboutPage',
+  components: {
+    LowerHeader
+  }
+};
+</script>
 
 <style scoped lang="scss">
 .about-head {

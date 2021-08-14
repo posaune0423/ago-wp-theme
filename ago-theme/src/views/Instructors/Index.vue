@@ -1,6 +1,6 @@
 <template>
   <div class="information">
-    <h1 class="section-heading">Information</h1>
+    <lower-header title="INSTRUCTORS" subtitle="講師陣" />
 
     <h2
       style="
@@ -327,6 +327,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import LowerHeader from '@/components/molecules/LowerHeader';
+
+export default {
+  name: 'InstructorsListPage',
+  components: {
+    LowerHeader
+  }
+};
+</script>
 
 <style scoped>
 hr {
