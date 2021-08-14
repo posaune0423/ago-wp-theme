@@ -8,7 +8,6 @@ import ConcertIndex from '@/views/Concerts/Index';
 import ConcertDetail from '@/views/Concerts/Detail';
 import Contact from '@/views/Contact';
 import InstructorsIndex from '@/views/Instructors/Index';
-import InstructorsDetail from '@/views/Instructors/Detail';
 
 Vue.use(Router);
 
@@ -43,10 +42,6 @@ export default new Router({
     {
       path: '/instructors/',
       component: InstructorsIndex
-    },
-    {
-      path: '/instructors/:id',
-      component: InstructorsDetail
     },
     {
       path: '/contact/',
