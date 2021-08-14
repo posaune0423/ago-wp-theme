@@ -1,8 +1,8 @@
 <template>
   <button
     class="menu-trigger"
-    :class="{ 'menu-trigger active': isActive }"
-    @click="isActive = !isActive"
+    :class="{ 'menu-trigger active': getIsActive }"
+    @click="toggleMenu"
   >
     <span></span>
     <span></span>
@@ -11,11 +11,14 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
-  data() {
-    return {
-      isActive: false
-    };
+  computed: {
+    ...mapGetters('menu', ['getIsActive'])
+  },
+  methods: {
+    ...mapMutations('menu', ['toggleMenu'])
   }
 };
 </script>

@@ -13,12 +13,21 @@
 <script>
 import TheHeader from '@/components/Header';
 import TheFooter from '@/components/Footer';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheFooter
+  },
+  methods: {
+    ...mapMutations('menu', ['closeMenu'])
+  },
+  watch: {
+    $route() {
+      this.closeMenu();
+    }
   }
 };
 </script>

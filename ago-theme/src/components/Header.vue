@@ -1,7 +1,5 @@
 <template>
   <div>
-    <slide-out-menu />
-
     <nav>
       <div id="logo-img">
         <router-link to="/">
@@ -21,18 +19,24 @@
         <menu-button />
       </span>
     </nav>
+
+    <mobile-menu />
   </div>
 </template>
 
 <script>
-import SlideOutMenu from '@/components/SlideOutMenu';
+import { mapGetters } from 'vuex';
+import MobileMenu from '@/components/MobileMenu';
 import MenuButton from '@/components/molecules/MenuButton';
 
 export default {
   name: 'TheHeader',
   components: {
-    SlideOutMenu,
+    MobileMenu,
     MenuButton
+  },
+  computed: {
+    ...mapGetters('menu', ['getIsActive'])
   }
 };
 </script>
@@ -40,7 +44,6 @@ export default {
 <style lang="scss" scoped>
 nav {
   top: 0;
-  height: $h_header;
   background: #fff;
   width: 100%;
   position: fixed;
@@ -77,8 +80,12 @@ nav {
     }
   }
 
+  @include pc-screen() {
+    height: $h_header;
+  }
   @include sp-screen() {
     padding: 0;
+    height: $h_header_sp;
     ul {
       display: none;
     }
