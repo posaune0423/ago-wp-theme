@@ -111,40 +111,73 @@ add_action('rest_api_init', 'register_rest_format_date');
 
 
 // Create Custom Pot type
-function create_post_type() {
+function create_concert()
+{
     $concertSupports = [
-      'title',
-      'editor',
-      'thumbnail',
-      'revisions'
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions'
     ];
 
     // add post type
-    register_post_type( 'concerts',
-      array(
-        'label' => 'Concerts',
-        'public' => true,
-        'has_archive' => true,
-        'menu_position' => 5,
-        'show_in_rest' => true,
-        'rest_base' => 'concerts',
-        'supports' => $concertSupports
-      )
+    register_post_type(
+        'concerts',
+        array(
+            'label' => 'Concerts',
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            'show_in_rest' => true,
+            'rest_base' => 'concerts',
+            'supports' => $concertSupports
+        )
     );
 
     // add taxonomy
     register_taxonomy(
-      'concert_taxonomy',
-      'category',
-      array(
-        'label' => 'category',
-        'labels' => array(
-          'all_items' => 'categories',
-          'add_new_item' => 'Add New Category'
-        ),
-        'hierarchical' => true
-      )
+        'concert_taxonomy',
+        'category',
+        array(
+            'label' => 'category',
+            'labels' => array(
+                'all_items' => 'categories',
+                'add_new_item' => 'Add New Category'
+            ),
+            'hierarchical' => true
+        )
     );
-  }
+}
 
-  add_action( 'init', 'create_post_type' );
+add_action('init', 'create_concert');
+
+
+
+// Create Custom Pot type
+function create_instructor()
+{
+    $instructorSupports = [
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions'
+    ];
+
+    // add post type
+    register_post_type(
+        'instructors',
+        array(
+            'label' => 'Instructors',
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 6,
+            'menu_icon'       => 'dashicons-admin-users',
+            'show_in_rest' => true,
+            'rest_base' => 'instructors',
+            'supports' => $instructorSupports
+        )
+    );
+}
+
+add_action('init', 'create_instructor');
