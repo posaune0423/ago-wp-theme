@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-none">
     <h1>スライドアウトメニュー</h1>
   </div>
 </template>
