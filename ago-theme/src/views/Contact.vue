@@ -1,201 +1,138 @@
 <template>
   <div>
     <lower-header title="CONTACT" subtitle="お問い合わせ" />
-    <div class="container">
-      <form id="form1" class="wpcf7-form" method="post">
-        <div style="display: none">
-          <input type="hidden" name="_wpcf7" value="849" />
-          <input type="hidden" name="_wpcf7_version" value="5.1.7" />
-          <input type="hidden" name="_wpcf7_locale" value="en_US" />
-          <input
-            type="hidden"
-            name="_wpcf7_unit_tag"
-            value="wpcf7-f849-p152-o1"
-          />
-          <input type="hidden" name="_wpcf7_container_post" value="152" />
-        </div>
+    <div class="form_container">
+      <form>
         <p>
-          <label>
-            Your Name (required)<br />
-            <span class="wpcf7-form-control-wrap your_name">
-              <input
-                v-model="form.your_name"
-                type="text"
-                name="your_name"
-                size="40"
-                class="
-                  wpcf7-form-control wpcf7-text wpcf7-validates-as-required
-                "
-              />
-            </span>
-          </label>
+          下記フォームからお問い合わせください。担当の者より折り返しご連絡させていただきます。
         </p>
-        <p>
-          <label>
-            Your Email (required)<br />
-            <span class="wpcf7-form-control-wrap your_email">
-              <input
-                v-model="form.your_email"
-                type="email"
-                name="your_email"
-                size="40"
-                class="
-                  wpcf7-form-control
-                  wpcf7-text
-                  wpcf7-email
-                  wpcf7-validates-as-required
-                  wpcf7-validates-as-email
-                "
-              />
-            </span>
-          </label>
-        </p>
-        <p>
-          <label>
-            Subject<br />
-            <span class="wpcf7-form-control-wrap your_subject">
-              <input
-                v-model="form.your_subject"
-                type="text"
-                name="your_subject"
-                size="40"
-                class="wpcf7-form-control wpcf7-text"
-              />
-            </span>
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Message<br />
-            <span class="wpcf7-form-control-wrap your_message">
-              <textarea
-                v-model="form.your_message"
-                name="your_message"
-                cols="40"
-                rows="10"
-                class="wpcf7-form-control wpcf7-textarea"
-              ></textarea>
-            </span>
-          </label>
-        </p>
-        <p>
-          <button
-            type="button"
-            style="margin-top: 20px"
-            @click.prevent="submitForm()"
-          >
-            Send
-          </button>
-        </p>
-        <div class="wpcf7-response-output wpcf7-display-none"></div>
+        <v-text-field
+          v-model="name"
+          class="my-2"
+          :error-messages="nameErrors"
+          label="お名前 *"
+          required
+          @input="$v.name.$touch()"
+          @blur="$v.name.$touch()"
+        ></v-text-field>
+        <v-text-field
+          v-model="email"
+          class="my-2"
+          :error-messages="emailErrors"
+          label="メールアドレス *"
+          required
+          @input="$v.email.$touch()"
+          @blur="$v.email.$touch()"
+        ></v-text-field>
+        <v-text-field
+          v-model="subject"
+          class="my-2"
+          :error-messages="subjectErrors"
+          label="件名 *"
+          required
+          @input="$v.subject.$touch()"
+          @blur="$v.subject.$touch()"
+        ></v-text-field>
+        <v-textarea
+          v-model="body"
+          class="my-2"
+          :error-messages="bodyErrors"
+          label="お問い合わせ内容 *"
+          required
+          @input="$v.body.$touch()"
+          @blur="$v.body.$touch()"
+        ></v-textarea>
+
+        <v-btn
+          block
+          large
+          class="mr-4"
+          color="success"
+          :disabled="$v.$invalid"
+          @click="submit"
+        >
+          送信
+        </v-btn>
       </form>
-      <div class="message" style="text-align: center">
-        <p v-if="errors.length" class="error-ms">
-          {{ errors }}
-        </p>
-        <p v-if="success.length" class="success-ms">
-          {{ success }}
-        </p>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
 import LowerHeader from '@/components/molecules/LowerHeader';
+import { required, email } from 'vuelidate/lib/validators';
 
 export default {
-  name: 'Contact',
+  name: 'ContactPage',
   components: {
     LowerHeader
   },
-  mounted() {
-    console.log('mounted');
+  validations: {
+    name: { required },
+    email: { required, email },
+    subject: { required },
+    body: { required }
   },
-  data() {
-    return {
-      url: '/wp-json/contact-form-7/v1/contact-forms/5/feedback',
-      form: {
-        your_name: '',
-        your_email: '',
-        your_subject: '',
-        your_message: ''
-      },
-      errors: '',
-      success: ''
-    };
+  data: () => ({
+    name: '',
+    email: '',
+    subject: '',
+    body: ''
+  }),
+  computed: {
+    nameErrors() {
+      const errors = [];
+      if (!this.$v.name.$dirty) return errors;
+      !this.$v.name.required && errors.push('入力してください');
+      return errors;
+    },
+    subjectErrors() {
+      const errors = [];
+      if (!this.$v.subject.$dirty) return errors;
+      !this.$v.subject.required && errors.push('入力してください');
+      return errors;
+    },
+    bodyErrors() {
+      const errors = [];
+      if (!this.$v.body.$dirty) return errors;
+      !this.$v.body.required && errors.push('入力してください');
+      return errors;
+    },
+    emailErrors() {
+      const errors = [];
+      if (!this.$v.email.$dirty) return errors;
+      !this.$v.email.email &&
+        errors.push('正しいメールアドレスを入力してください');
+      !this.$v.email.required && errors.push('入力してください');
+      return errors;
+    }
   },
+
   methods: {
-    submitForm() {
-      let formData = new FormData(document.forms.form1);
-      axios
-        .post(this.url, formData)
-        .then((response) => {
-          if (response.data.status !== 'mail_sent') {
-            this.errors = '';
-            this.errors = response.data.message;
-          } else {
-            this.errors = '';
-            this.success = response.data.message;
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          this.errors = error;
-        });
+    submit() {
+      if (!this.$v.$invalid) {
+        console.log(this.$data);
+        // submit
+      }
     }
   }
 };
 </script>
 
-<style>
-.container {
-  padding: 20px;
-}
-.wpcf7-form {
-  margin-bottom: 30px;
-}
-input.wpcf7-form-control.wpcf7-text,
-textarea.wpcf7-form-control.wpcf7-textarea {
-  width: 90%;
-  padding: 8px 15px;
-  margin-right: 10px;
-  margin-top: 10px;
-  border: 1px solid #d0d5d8;
-  border-radius: 3px;
-  outline: none;
-}
-textarea.wpcf7-form-control.wpcf7-textarea {
-  height: 200px;
-}
-.wpcf7-form p {
-  margin-bottom: 15px;
-}
-/* 送信ボタンを見やすくする */
-.wpcf7-form button {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 10px;
-  background: #353535;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-.error-ms {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.success-ms {
-  color: lightgreen;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+<style lang="scss" scoped>
+.form_container {
+  background-color: $c_gray-light;
+
+  form {
+    padding: 2rem;
+    background-color: $c_white;
+  }
+
+  @include pc-screen() {
+    padding: 2rem 14rem;
+  }
+  @include sp-screen() {
+    padding: 2rem;
+  }
 }
 </style>
