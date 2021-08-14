@@ -134,10 +134,9 @@ export default {
         this.$axios
           .post(this.url, formData)
           .then((res) => {
-            if (res.status === 'mail_sent') {
-              this.$router.push('/thanks/');
+            if (res.data.status == 'mail_sent') {
+              return this.$router.push('/thanks/');
             } else {
-              console.log(res);
               this.snackbar.visible = true;
               this.snackbar.message = '入力内容に誤りがあります。';
             }
