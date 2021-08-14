@@ -1,5 +1,6 @@
 <template>
   <div>
+    <lower-header title="NEWS" subtitle="お知らせ" />
     <bread-list :title="post.title.rendered" />
     <h1 class="my-2">{{ post.title.rendered }}</h1>
     <div class="my-2 gray--text">{{ post.date }}</div>
@@ -23,10 +24,11 @@
 <script>
 import PostContent from '@/components/News/Content';
 import BreadList from '@/components/News/BreadList';
+import LowerHeader from '@/components/molecules/LowerHeader';
 
 export default {
   name: 'PostDetail',
-  components: { PostContent, BreadList },
+  components: { PostContent, BreadList, LowerHeader },
   data() {
     return {
       post: {}
@@ -34,7 +36,7 @@ export default {
   },
   methods: {
     getPost() {
-      this.$axios.get(`posts/${this.$route.params.id}`).then((res) => {
+      this.$axios.get(`wp/v2/posts/${this.$route.params.id}`).then((res) => {
         this.post = res.data;
       });
     }

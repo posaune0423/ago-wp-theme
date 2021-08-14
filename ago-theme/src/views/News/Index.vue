@@ -1,5 +1,6 @@
 <template>
   <div>
+    <lower-header title="NEWS" subtitle="お知らせ" />
     <bread-list />
     <v-container class="my-4">
       <post-list />
@@ -10,12 +11,14 @@
 <script>
 import PostList from '@/components/News/List';
 import BreadList from '@/components/News/BreadList';
+import LowerHeader from '@/components/molecules/LowerHeader';
 
 export default {
   name: 'PostIndex',
   components: {
     PostList,
-    BreadList
+    BreadList,
+    LowerHeader
   }
 };
 </script>
