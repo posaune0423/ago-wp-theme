@@ -2,7 +2,7 @@
   <div>
     <lower-header title="CONTACT" subtitle="お問い合わせ" />
     <div class="form_container">
-      <form>
+      <form id="form1">
         <p>
           下記フォームからお問い合わせください。担当の者より折り返しご連絡させていただきます。
         </p>
@@ -55,6 +55,16 @@
         </v-btn>
       </form>
     </div>
+    <v-snackbar v-model="snackbar.visible" :timeout="2000">
+      <span :class="{ 'red--text': !snackbar.isSuccess }">
+        {{ snackbar.message }}
+      </span>
+      <template #action="{ attrs }">
+        <v-icon v-bind="attrs" @click="snackbar.visible = false"
+          >mdi-close-circle</v-icon
+        >
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -74,10 +84,15 @@ export default {
     body: { required }
   },
   data: () => ({
+    url: 'contact-form-7/v1/contact-forms/6/feedback',
     name: '',
     email: '',
     subject: '',
-    body: ''
+    body: '',
+    snackbar: {
+      visible: false,
+      message: ''
+    }
   }),
   computed: {
     nameErrors() {
@@ -107,13 +122,44 @@ export default {
       return errors;
     }
   },
-
   methods: {
     submit() {
       if (!this.$v.$invalid) {
-        console.log(this.$data);
-        // submit
+        const formData = this.convertJsontoUrlencoded({
+          your_name: this.name,
+          your_email: this.email,
+          your_subject: this.subject,
+          your_body: this.body
+        });
+        this.$axios
+          .post(this.url, formData)
+          .then((res) => {
+            if (res.status === 'mail_sent') {
+              this.$router.push('/thanks/');
+            } else {
+              console.log(res);
+              this.snackbar.visible = true;
+              this.snackbar.message = '入力内容に誤りがあります。';
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            this.snackbar.visible = true;
+            this.snackbar.message =
+              '予期せぬエラーが発生しました。しばらく待ってからもう一度お試しください。';
+          });
       }
+    },
+    convertJsontoUrlencoded(obj) {
+      let str = [];
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          str.push(
+            encodeURIComponent(key) + '=' + encodeURIComponent(obj[key])
+          );
+        }
+      }
+      return str.join('&');
     }
   }
 };
