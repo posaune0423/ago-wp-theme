@@ -22,25 +22,45 @@ export default {
 <style lang="scss" scoped>
 .lower_header {
   margin-top: $h_header;
-  padding-right: 2rem;
-  padding-left: 4rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   position: relative;
-  overflow: hidden;
+
+  @include pc-screen {
+    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    overflow: hidden;
+  }
+  @include sp-screen {
+    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .header_title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  @include pc-screen {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  @include sp-screen {
+    font-size: 2rem;
+  }
 }
 
 .header_subtitle {
-  font-size: 0.9rem;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
+  @include pc-screen {
+    font-size: 0.9rem;
+  }
+  @include sp-screen {
+    font-size: 0.7rem;
+  }
 }
 
 .bg-text {
@@ -48,16 +68,13 @@ export default {
     font-size: 14rem;
     top: 1.8rem;
     left: 31vw;
+    color: #fff;
+    -webkit-text-stroke: 2px #cfcfcf;
+    position: absolute;
+    opacity: 0.3;
   }
   @include sp-screen {
-    font-size: 2.6rem;
-    top: 0;
-    left: 32vw;
+    display: none;
   }
-  color: #fff;
-  -webkit-text-stroke: 2px #cfcfcf;
-  position: absolute;
-  z-index: 0;
-  opacity: 0.3;
 }
 </style>
