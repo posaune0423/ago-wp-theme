@@ -3,6 +3,7 @@
     <ul>
       <li><router-link to="/">HOME</router-link></li>
       <li><router-link to="/about/">ABOUT</router-link></li>
+      <li><router-link to="/news/">NEWS</router-link></li>
       <li><router-link to="/concerts/">CONCERTS</router-link></li>
       <li><router-link to="/instructors/">INSTRUCTORS</router-link></li>
       <li>
