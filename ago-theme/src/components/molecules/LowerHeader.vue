@@ -22,19 +22,22 @@ export default {
 <style lang="scss" scoped>
 .lower_header {
   margin-top: $h_header;
-  padding: 2rem;
+  padding-right: 2rem;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   position: relative;
   overflow: hidden;
 }
 
 .header_title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .header_subtitle {
   font-size: 0.9rem;
-  color: #565656;
   margin-left: 1rem;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
@@ -42,9 +45,9 @@ export default {
 
 .bg-text {
   @include pc-screen {
-    font-size: 9rem;
-    top: 0;
-    left: 21vw;
+    font-size: 14rem;
+    top: 1.8rem;
+    left: 31vw;
   }
   @include sp-screen {
     font-size: 2.6rem;
