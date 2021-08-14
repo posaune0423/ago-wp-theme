@@ -47,5 +47,8 @@ export default new Router({
       path: '/thanks/',
       component: Thanks
     }
-  ]
+  ],
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  }
 });
