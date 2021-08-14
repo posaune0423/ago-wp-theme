@@ -2,7 +2,7 @@
   <div>
     <h1 class="section-heading">Contact Us</h1>
     <div class="container">
-      <form class="wpcf7-form" method="post" id="form1">
+      <form id="form1" class="wpcf7-form" method="post">
         <div style="display: none">
           <input type="hidden" name="_wpcf7" value="849" />
           <input type="hidden" name="_wpcf7_version" value="5.1.7" />
@@ -19,13 +19,13 @@
             Your Name (required)<br />
             <span class="wpcf7-form-control-wrap your_name">
               <input
+                v-model="form.your_name"
                 type="text"
                 name="your_name"
                 size="40"
                 class="
                   wpcf7-form-control wpcf7-text wpcf7-validates-as-required
                 "
-                v-model="form.your_name"
               />
             </span>
           </label>
@@ -35,6 +35,7 @@
             Your Email (required)<br />
             <span class="wpcf7-form-control-wrap your_email">
               <input
+                v-model="form.your_email"
                 type="email"
                 name="your_email"
                 size="40"
@@ -45,7 +46,6 @@
                   wpcf7-validates-as-required
                   wpcf7-validates-as-email
                 "
-                v-model="form.your_email"
               />
             </span>
           </label>
@@ -55,11 +55,11 @@
             Subject<br />
             <span class="wpcf7-form-control-wrap your_subject">
               <input
+                v-model="form.your_subject"
                 type="text"
                 name="your_subject"
                 size="40"
                 class="wpcf7-form-control wpcf7-text"
-                v-model="form.your_subject"
               />
             </span>
           </label>
@@ -69,11 +69,11 @@
             Your Message<br />
             <span class="wpcf7-form-control-wrap your_message">
               <textarea
+                v-model="form.your_message"
                 name="your_message"
                 cols="40"
                 rows="10"
                 class="wpcf7-form-control wpcf7-textarea"
-                v-model="form.your_message"
               ></textarea>
             </span>
           </label>
@@ -90,10 +90,10 @@
         <div class="wpcf7-response-output wpcf7-display-none"></div>
       </form>
       <div class="message" style="text-align: center">
-        <p class="error-ms" v-if="errors.length">
+        <p v-if="errors.length" class="error-ms">
           {{ errors }}
         </p>
-        <p class="success-ms" v-if="success.length">
+        <p v-if="success.length" class="success-ms">
           {{ success }}
         </p>
       </div>

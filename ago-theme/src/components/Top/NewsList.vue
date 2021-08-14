@@ -1,8 +1,8 @@
 <template>
   <div>
-      <h1>
-          Topページ用News List
-      </h1>
+    <h1>
+      Topページ用News List
+    </h1>
   </div>
 </template>
 

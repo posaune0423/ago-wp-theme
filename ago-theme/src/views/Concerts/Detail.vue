@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>コンサート詳細</h1>
+    <h1>コンサート詳細</h1>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img src="@/assets/images/hero_image.jpeg" alt="">
+  <div class="hero_image">
+    <img src="@/assets/images/hero_image.jpeg" alt="" />
   </div>
 </template>
 
@@ -8,4 +8,10 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hero_image {
+  img {
+    width: 100%;
+  }
+}
+</style>

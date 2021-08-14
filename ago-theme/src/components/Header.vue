@@ -4,7 +4,7 @@
 
     <nav>
       <span id="menu-icon">
-        <a href="#" style="text-decoration: none"> ☰ </a>
+        <v-icon>mdi-menu</v-icon>
       </span>
       <div id="logo-img">
         <router-link to="/">
@@ -27,6 +27,7 @@
 <script>
 import SlideOutMenu from '@/components/SlideOutMenu.vue';
 export default {
+  name: 'TheHeader',
   components: {
     SlideOutMenu
   }
@@ -47,7 +48,7 @@ nav {
   padding: 0 16px 0 0;
   box-sizing: border-box;
   z-index: 1;
-  box-shadow: 0 10px 10px -12px #676767;
+//   box-shadow: 0 10px 10px -12px #676767;
 
   a {
     padding-left: 16px;
@@ -65,7 +66,7 @@ nav {
   }
   li {
     a {
-      :hover {
+      &:hover {
         text-decoration: none;
         opacity: 0.7;
       }
