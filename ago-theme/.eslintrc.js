@@ -18,6 +18,7 @@ module.exports = {
     'arrow-parens': 'off',
     'no-console': 'off',
     'no-irregular-whitespace': 'off',
+    'no-prototype-builtins': 'off',
     'prefer-promise-reject-errors': 'off',
     'require-await': 'off',
     'space-before-function-paren': ['error', 'never'],
