@@ -12,6 +12,7 @@
         :image="trainer.image"
         :part="trainer.part"
         :description="trainer.description"
+        :position="trainer.position"
       />
     </div>
   </div>
