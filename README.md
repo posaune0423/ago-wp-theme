@@ -58,3 +58,19 @@ please try this out
 
 ### How to get static page
 https://developer.wordpress.org/rest-api/reference/pages/#definition-example-request
+
+
+### Set up PHP Mailer
+#### In local development
+I addded the container for SMTP server in docker-compose.yml so we can use it.
+First, you have to install Plugin named [WP Mail SMTP](https://wpmailsmtp.com/)
+and in the settings, please fill in the information below
+
+| Key            | Value |
+| -------------- | ----- |
+| SMTP Host      | smtp  |
+| Encryption     | None  | 
+| SSL            | TLS   |
+| SMTP Port      | 1025  |
+| Auto TLS       | ON    |
+| Authentication | OFF   |
