@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     getPosts() {
-      this.$axios.get('posts').then((res) => {
+      this.$axios.get('wp/v2/posts').then((res) => {
         this.posts = res.data;
       });
     }
