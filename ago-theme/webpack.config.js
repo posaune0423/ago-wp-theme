@@ -118,11 +118,13 @@ module.exports = {
   // Reload browser when html, css, js files is updated
   devServer: {
     publicPath: '/dist/',
-    contentBase: './src/',
+    contentBase: '/dist/js',
     watchContentBase: true,
     open: true, // Autostart browser when the server is started
     host: '0.0.0.0',
-    port: 8000
+    port: 8000,
+    inline: true,
+    hot: true
   },
   watchOptions: {
     poll: true
