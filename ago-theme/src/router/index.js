@@ -2,12 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Top from '@/views/Top';
 import About from '@/views/About';
-import NewsIndex from '@/views/News/Index';
-import NewsDetail from '@/views/News/Detail';
-import ConcertIndex from '@/views/Concerts/Index';
-import ConcertDetail from '@/views/Concerts/Detail';
 import Contact from '@/views/Contact';
-import InstructorsIndex from '@/views/Instructors/Index';
+import Thanks from '@/views/Thanks';
 
 Vue.use(Router);
 
@@ -25,27 +21,31 @@ export default new Router({
     },
     {
       path: '/news/',
-      component: NewsIndex
+      component: () => import('@/views/News/Index')
     },
     {
       path: '/news/:id',
-      component: NewsDetail
+      component: () => import('@/views/News/Detail')
     },
     {
       path: '/concerts/',
-      component: ConcertIndex
+      component: () => import('@/views/Concerts/Index')
     },
     {
       path: '/concerts/:id',
-      component: ConcertDetail
+      component: () => import('@/views/Concerts/Detail')
     },
     {
       path: '/instructors/',
-      component: InstructorsIndex
+      component: () => import('@/views/Instructors/Index')
     },
     {
       path: '/contact/',
       component: Contact
+    },
+    {
+      path: '/thanks/',
+      component: Thanks
     }
   ]
 });
