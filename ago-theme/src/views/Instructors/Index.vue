@@ -20,10 +20,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/tabuchi.png"
-            alt=""
-          />
+          <img src="@/assets/images/instructors/tabuchi.png" alt="" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -47,10 +44,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/inobe.png"
-            alt=""
-          />
+          <img src="@/assets/images/instructors/inobe.png" alt="" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -81,9 +75,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/niwa.png"
-          />
+          <img src="@/assets/images/instructors/niwa.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -109,9 +101,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/nishiyama.png"
-          />
+          <img src="@/assets/images/instructors/nishiyama.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -137,9 +127,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/hosokawa.png"
-          />
+          <img src="@/assets/images/instructors/hosokawa.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -164,9 +152,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/kitajima.png"
-          />
+          <img src="@/assets/images/instructors/kitajima.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -192,9 +178,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/katoh.png"
-          />
+          <img src="@/assets/images/instructors/katoh.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -220,9 +204,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/kiryu.png"
-          />
+          <img src="@/assets/images/instructors/kiryu.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -247,9 +229,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/abe2.png"
-          />
+          <img src="@/assets/images/instructors/abe2.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -272,9 +252,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/kitamura.png"
-          />
+          <img src="@/assets/images/instructors/kitamura.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -300,9 +278,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/okumura.png"
-          />
+          <img src="@/assets/images/instructors/okumura.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
@@ -329,9 +305,7 @@
 
       <div class="trainers-card">
         <div class="trainers-img">
-          <img
-            src="@/assets/images/instructors/momose.png"
-          />
+          <img src="@/assets/images/instructors/momose.png" />
         </div>
         <div class="trainers-desc">
           <div class="trainer-name">
