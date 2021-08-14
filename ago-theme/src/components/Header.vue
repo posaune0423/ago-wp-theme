@@ -3,12 +3,9 @@
     <slide-out-menu />
 
     <nav>
-      <span id="menu-icon">
-        <v-icon>mdi-menu</v-icon>
-      </span>
       <div id="logo-img">
         <router-link to="/">
-          <img src="@/assets/images/logo.jpg" alt="AGOLogo" />
+          <img src="@/assets/images/logo.jpg" alt="Logo" />
         </router-link>
       </div>
       <ul>
@@ -20,16 +17,22 @@
         </li>
         <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
+      <span id="menu-icon">
+        <menu-button />
+      </span>
     </nav>
   </div>
 </template>
 
 <script>
-import SlideOutMenu from '@/components/SlideOutMenu.vue';
+import SlideOutMenu from '@/components/SlideOutMenu';
+import MenuButton from '@/components/molecules/MenuButton';
+
 export default {
   name: 'TheHeader',
   components: {
-    SlideOutMenu
+    SlideOutMenu,
+    MenuButton
   }
 };
 </script>
@@ -73,53 +76,53 @@ nav {
       }
     }
   }
-}
 
-#logo-img {
-  display: flex;
-  background: #fff;
-  padding: 0 32px;
-  align-items: center;
-  color: white;
-  transition: 0.4s;
-  img {
-    height: 52px;
-  }
-}
-/* Menu Icon */
-#menu-icon {
-  padding-top: 5px;
-  height: 100%;
-  line-height: 1;
-  font-size: 28px;
-  color: #343434;
-  /* display: none; */
-  align-items: center;
-  z-index: 3;
-  a {
-    color: #454545;
-  }
-}
-@media (min-width: 946px) {
-  #menu-icon {
-    display: none;
-  }
-}
-@media (max-width: 946px) {
-  nav {
+  @include sp-screen() {
     padding: 0;
     ul {
       display: none;
     }
   }
-  #logo-img {
+}
+
+#logo-img {
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  background: #fff;
+
+  @include pc-screen() {
+    padding: 0 32px;
+    img {
+      height: 52px;
+    }
+  }
+  @include sp-screen() {
     padding-top: 10px;
     padding-right: 0;
     img {
       height: 40px;
     }
   }
-  #menu-icon {
+}
+
+#menu-icon {
+  padding-top: 5px;
+  height: 100%;
+  line-height: 1;
+  font-size: 28px;
+  color: #343434;
+  align-items: center;
+  z-index: 3;
+  a {
+    color: #454545;
+  }
+  @include pc-screen() {
+    display: none;
+  }
+
+  @include sp-screen() {
     display: flex;
     a {
       padding-bottom: 10px;
