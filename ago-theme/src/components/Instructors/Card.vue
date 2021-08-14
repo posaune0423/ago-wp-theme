@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" width="300">
+  <v-card class="mx-auto trainer_card">
     <v-img :src="image" height="280px" :position="position || 'center'"></v-img>
 
     <v-card-title>
@@ -35,4 +35,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.trainer_card {
+  @include pc-screen() {
+    width: 300px;
+  }
+}
+</style>
