@@ -9,7 +9,7 @@
         <v-text-field
           v-model="name"
           color="success"
-          class="my-2"
+          class="my-6 py-4"
           :error-messages="nameErrors"
           label="お名前 *"
           required
@@ -19,7 +19,7 @@
         <v-text-field
           v-model="email"
           color="success"
-          class="my-2"
+          class="my-6 py-4"
           :error-messages="emailErrors"
           label="メールアドレス *"
           required
@@ -29,7 +29,7 @@
         <v-text-field
           v-model="subject"
           color="success"
-          class="my-2"
+          class="my-6 py-4"
           :error-messages="subjectErrors"
           label="件名 *"
           required
@@ -39,7 +39,7 @@
         <v-textarea
           v-model="body"
           color="success"
-          class="my-2"
+          class="my-6 py-4"
           :error-messages="bodyErrors"
           label="お問い合わせ内容 *"
           required
@@ -173,7 +173,12 @@ export default {
   background-color: $c_gray-light;
 
   form {
-    padding: 2rem;
+    @include pc-screen() {
+      padding: 2rem;
+    }
+    @include sp-screen() {
+      padding: 2rem 1rem;
+    }
     background-color: $c_white;
   }
 
@@ -181,7 +186,7 @@ export default {
     padding: 2rem 14rem;
   }
   @include sp-screen() {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 }
 </style>
