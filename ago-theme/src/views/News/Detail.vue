@@ -57,8 +57,14 @@ export default {
 }
 
 .newsTitle {
-  font-size: 1.5rem;
+  @include pc-screen() {
+    font-size: 2rem;
+  }
+  @include sp-screen() {
+    font-size: 1.5rem;
+  }
   padding: 1rem;
+  color: $c_black;
 }
 
 .newsDate {
@@ -78,6 +84,9 @@ export default {
     width: 94%;
     max-width: 94%;
   }
+  @include pc-screen() {
+    width: 70%;
+  }
 }
 
 .newsDetail__container {
@@ -89,7 +98,8 @@ export default {
 .newsDetail__wrap {
   background-color: $c_gray-light;
   @include pc-screen() {
-    padding: 2rem 8rem;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 </style>
