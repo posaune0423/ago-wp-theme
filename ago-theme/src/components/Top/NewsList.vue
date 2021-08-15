@@ -4,6 +4,9 @@
     <div class="newsCard__container">
       <news-card v-for="post in posts" :key="post.id" :post="post" />
     </div>
+    <div class="text-center btn_container">
+      <v-btn color="success" block x-large to="/news/">VIEW MORE</v-btn>
+    </div>
   </div>
 </template>
 
@@ -55,6 +58,17 @@ export default {
   gap: 2rem;
   @include pc-screen() {
     padding: 2rem 6rem;
+  }
+}
+
+.btn_container {
+  @include pc-screen() {
+    width: 20%;
+    margin: 0 auto;
+  }
+  @include sp-screen() {
+    width: 46%;
+    margin: 2rem auto;
   }
 }
 </style>
