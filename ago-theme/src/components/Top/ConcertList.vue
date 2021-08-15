@@ -56,6 +56,9 @@ export default {
   @include pc-screen() {
     padding: 2rem 6rem;
   }
+  @include sp-screen() {
+    padding: 2rem 1rem;
+  }
 }
 .btn_container {
   @include pc-screen() {

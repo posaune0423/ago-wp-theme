@@ -40,18 +40,23 @@ export default {
   pointer-events: none;
   transition: opacity 0.225s;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   a {
     font-size: 1.3rem;
     color: #757575;
     text-decoration: none;
   }
   ul {
+    margin-bottom: $h_header_sp;
     list-style: none;
     padding-left: 0;
-    padding-top: 6rem;
+    padding-top: 2rem;
     li {
-      padding-top: 2.4rem;
-      padding-bottom: 2.4rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       height: 57px;
     }
   }
