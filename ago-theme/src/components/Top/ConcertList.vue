@@ -1,32 +1,32 @@
 <template>
-  <section class="Top__newsList">
+  <section class="Top__ConcertList">
     <section-title
-      class="concertList__header"
+      class="Top__ConcertList__Header"
       title="CONCERTS"
       subtitle="演奏会情報"
     />
-    <div class="concertCard__container">
+    <div class="ConcertCard__Container">
       <concert-card
         v-for="concert in topConcerts"
         :key="concert.id"
         :concert="concert"
       />
     </div>
-    <div class="text-center btn_container">
-      <v-btn color="success" block x-large to="/concerts/">VIEW MORE</v-btn>
-    </div>
+    <view-more-btn path="/concerts/" />
   </section>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
 import ConcertCard from '@/components/Concerts/Card';
+import ViewMoreBtn from '@/components/molecules/ViewMoreBtn';
 
 export default {
   name: 'TopConcertList',
   components: {
     SectionTitle,
-    ConcertCard
+    ConcertCard,
+    ViewMoreBtn
   },
   computed: {
     topConcerts() {
@@ -37,11 +37,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Top__newsList {
+.Top__ConcertList {
   padding-bottom: 2rem;
   background-color: $c_gray-light;
 }
-.concertList__header {
+.Top__ConcertList__Header {
   @include pc-screen() {
     padding: 2rem 6rem;
   }
@@ -49,7 +49,7 @@ export default {
     padding: 2rem 1rem;
   }
 }
-.concertCard__container {
+.ConcertCard__Container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -58,16 +58,6 @@ export default {
   }
   @include sp-screen() {
     padding: 2rem 1rem;
-  }
-}
-.btn_container {
-  @include pc-screen() {
-    width: 20%;
-    margin: 0 auto;
-  }
-  @include sp-screen() {
-    width: 46%;
-    margin: 2rem auto;
   }
 }
 </style>

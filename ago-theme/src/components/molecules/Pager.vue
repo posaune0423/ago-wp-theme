@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center mt-6">
-    <div class="pagination text-center">
+  <div class="Pager">
+    <div class="Pager__Inner">
       <v-btn :disabled="!prev" @click="$router.push(`/news/?page=${prev}`)">
         <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
@@ -18,4 +18,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.Pager {
+  text-align: center;
+  margin-top: 3rem;
+  &__Inner {
+    width: 42%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+</style>

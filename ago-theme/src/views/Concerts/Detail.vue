@@ -1,7 +1,7 @@
 <template>
   <article>
     <lower-header title="CONCERTS" subtitle="演奏会情報" />
-    <div class="concertDetail__container">
+    <div class="ConcertsDetail">
       <v-skeleton-loader
         v-if="!concert.title"
         class="mx-auto my-2"
@@ -14,7 +14,7 @@
         :title="concert.title.rendered"
         parent="Concerts"
       />
-      <div class="concertDetail__wrap">
+      <div class="ConcertsDetail__Inner">
         <v-skeleton-loader
           v-if="!concert.title"
           class="mx-auto my-2"
@@ -22,10 +22,12 @@
           height="1.5rem"
           type="heading"
         ></v-skeleton-loader>
-        <h1 v-else class="my-2 concertTitle">
+        <h1 v-else class="my-2 ConcertsDetail__Title">
           {{ concert.title.rendered }}
         </h1>
-        <div class="my-2 gray--text concertDate">{{ concert.date }}</div>
+        <div class="my-2 gray--text ConcertsDetail__Date">
+          {{ concert.date }}
+        </div>
         <v-skeleton-loader
           v-if="!concert.featured_image"
           class="mx-auto"
@@ -33,7 +35,7 @@
           height="460"
           type="image"
         ></v-skeleton-loader>
-        <div v-else class="concertDetail__image">
+        <div v-else class="ConcertsDetail__Image">
           <v-img :src="concert.featured_image.src" alt="演奏会画像" />
         </div>
         <post-content
@@ -81,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.concertDetail__container {
+.ConcertsDetail {
   background-color: $c_gray-light;
   @include pc-screen() {
     padding: 2rem 0;
@@ -89,40 +91,37 @@ export default {
   @include sp-screen() {
     padding: 1rem 0;
   }
-}
-.concertDetail__wrap {
-  background-color: $c_gray-light;
-  @include pc-screen() {
-    width: 50%;
+  &__Inner {
+    background-color: $c_gray-light;
+    @include pc-screen() {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  &__Title {
+    color: $c_black;
+    @include sp-screen() {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  &__Date {
+    @include sp-screen() {
+      padding: 1rem;
+    }
+    text-align: right;
+  }
+  &__Image {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
-  }
-}
-
-.concertTitle {
-  color: $c_black;
-  @include sp-screen() {
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-}
-
-.concertDate {
-  @include sp-screen() {
-    padding: 1rem;
-  }
-  text-align: right;
-}
-
-.concertDetail__image {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  @include sp-screen() {
-    width: 94%;
-    max-width: 94%;
-  }
-  @include pc-screen() {
-    width: 70%;
+    @include sp-screen() {
+      width: 94%;
+      max-width: 94%;
+    }
+    @include pc-screen() {
+      width: 70%;
+    }
   }
 }
 </style>

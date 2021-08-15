@@ -1,28 +1,29 @@
 <template>
-  <div>
+  <div class="Thanks">
     <lower-header title="CONTACT" subtitle="お問い合わせ" />
-    <div class="thanks_container">
-      <div class="thanks_header_wrap">
-        <h2 class="thanks_header">
+    <div class="Thanks__Container">
+      <div class="Thanks__Header">
+        <h2 class="Thanks__Header__Inner">
           お問い合わせありがとうございました。
         </h2>
       </div>
-      <p class="thanks_body">
+      <p class="Thanks__Body">
         この度は青山学院管弦楽団へお問い合わせいただき、ありがとうございます。<br />
         お問い合わせ内容を確認の上、担当者より連絡いたしますので、少々お待ちください。
       </p>
-      <div class="text-center btn_container">
-        <v-btn color="success" block x-large to="/">TOPに戻る</v-btn>
-      </div>
+      <view-more-btn path="/" text="TOPに戻る" />
     </div>
   </div>
 </template>
 
 <script>
 import LowerHeader from '@/components/molecules/LowerHeader';
+import ViewMoreBtn from '@/components/molecules/ViewMoreBtn';
+
 export default {
   components: {
-    LowerHeader
+    LowerHeader,
+    ViewMoreBtn
   },
   head: {
     title: function() {
@@ -37,34 +38,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.thanks_container {
-  background-color: $c_gray-light;
+.Thanks {
+  &__Container {
+    background-color: $c_gray-light;
 
-  @include pc-screen() {
-    padding: 2rem 4rem;
+    @include pc-screen() {
+      padding: 2rem 4rem;
+    }
+    @include sp-screen() {
+      padding: 2rem;
+    }
   }
-  @include sp-screen() {
-    padding: 2rem;
+  &__Header__Inner {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem auto;
   }
-}
-.thanks_header {
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem auto;
-}
-
-.thanks_body {
-  text-align: center;
-  margin: 2rem auto;
-}
-
-.btn_container {
-  @include pc-screen() {
-    width: 26%;
+  &__Body {
+    text-align: center;
+    margin: 2rem auto;
   }
-  @include sp-screen() {
-    width: 46%;
-  }
-  margin: 0 auto;
 }
 </style>

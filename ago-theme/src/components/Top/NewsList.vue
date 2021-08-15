@@ -1,24 +1,24 @@
 <template>
-  <section class="Top__newsList">
+  <section class="Top__NewsList">
     <section-title class="newsList__header" title="NEWS" subtitle="お知らせ" />
-    <div class="newsCard__container">
+    <div class="NewsCard__Container">
       <news-card v-for="news in topNews" :key="news.id" :post="news" />
     </div>
-    <div class="text-center btn_container">
-      <v-btn color="success" block x-large to="/news/">VIEW MORE</v-btn>
-    </div>
+    <view-more-btn path="/news/" />
   </section>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
+import ViewMoreBtn from '@/components/molecules/ViewMoreBtn';
 import NewsCard from '@/components/News/Card';
 
 export default {
   name: 'TopNewsList',
   components: {
     SectionTitle,
-    NewsCard
+    NewsCard,
+    ViewMoreBtn
   },
   computed: {
     topNews() {
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Top__newsList {
+.Top__NewsList {
   padding-bottom: 2rem;
 }
 .newsList__header {
@@ -40,7 +40,7 @@ export default {
     padding: 2rem 1rem;
   }
 }
-.newsCard__container {
+.NewsCard__Container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -49,17 +49,6 @@ export default {
   }
   @include sp-screen() {
     padding: 2rem 1rem;
-  }
-}
-
-.btn_container {
-  @include pc-screen() {
-    width: 20%;
-    margin: 0 auto;
-  }
-  @include sp-screen() {
-    width: 46%;
-    margin: 2rem auto;
   }
 }
 </style>

@@ -1,18 +1,18 @@
 <template>
-  <div class="information">
+  <div class="Instructors">
     <lower-header title="INSTRUCTORS" subtitle="講師陣" />
 
-    <div class="trainers">
+    <div class="Instructors__Container">
       <instructor-card
-        v-for="(trainer, i) in trainers"
+        v-for="(instructor, i) in instructors"
         :key="i"
         class="my-6"
-        :name="trainer.name"
-        :belonging="trainer.belonging"
-        :image="trainer.image"
-        :part="trainer.part"
-        :description="trainer.description"
-        :position="trainer.position"
+        :name="instructor.name"
+        :belonging="instructor.belonging"
+        :image="instructor.image"
+        :part="instructor.part"
+        :description="instructor.description"
+        :position="instructor.position"
       />
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      trainers: [
+      instructors: [
         {
           name: '田渕 彰 (タブチ アキラ)',
           belonging: 'NHK交響楽団団友',
@@ -193,7 +193,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.trainers {
+.Instructors__Container {
   background-color: $c_gray-light;
   @include pc-screen() {
     display: flex;

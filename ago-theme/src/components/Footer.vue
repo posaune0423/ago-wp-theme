@@ -1,6 +1,6 @@
 <template>
   <footer class="Footer">
-    <div class="Footer__left">
+    <div class="Footer__Left">
       <h3>Quick link</h3>
       <ul>
         <li><router-link to="/">HOME</router-link></li>
@@ -14,28 +14,28 @@
         <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
     </div>
-    <div class="Footer__right">
+    <div class="Footer__Right">
       <h3>Follow us on</h3>
-      <div class="Footer__sns">
+      <div class="Footer__SNS">
         <ul>
           <li>
             <a href="https://www.facebook.com/aoyamagakuinorchestra/">
-              <v-icon>mdi-facebook</v-icon>
+              <v-icon large>mdi-facebook</v-icon>
             </a>
           </li>
           <li>
             <a href="https://twitter.com/aoyamaorchestra">
-              <v-icon>mdi-twitter</v-icon>
+              <v-icon large>mdi-twitter</v-icon>
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/channel/UC6_-dbI_cSZbOf95QjBuaLg">
-              <v-icon>mdi-youtube</v-icon>
+              <v-icon large>mdi-youtube</v-icon>
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/aoyamaorchestra/?hl=ja">
-              <v-icon>mdi-instagram</v-icon>
+              <v-icon large>mdi-instagram</v-icon>
             </a>
           </li>
         </ul>
@@ -68,53 +68,55 @@ export default {
     color: $c_black-light;
     margin-top: 18px;
     margin-bottom: 18px;
-    font-size: 1.17em;
+    font-size: 1.5rem;
     font-weight: normal;
   }
-}
-
-.Footer__left {
-  flex: 1;
-  border-left: 32px;
-  padding-left: 80px;
-  ul {
-    padding: 0;
-    list-style: none;
-    line-height: 1.5;
-    li {
+  &__Left {
+    flex: 1;
+    border-left: 32px;
+    padding-left: 80px;
+    ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.5;
+      li {
+        margin: 1rem auto;
+      }
+    }
+  }
+  &__Right {
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+    h3 {
       margin: 1rem auto;
     }
   }
-}
-.Footer__right {
-  flex: 2;
-  padding: 8px;
-  text-align: center;
-}
-.Footer__sns {
-  a {
-    .fa-facebook,
-    .fa-twitter,
-    .fa-github {
-      color: black;
-      transition: 0.4s;
+  &__SNS {
+    a {
+      .fa-facebook,
+      .fa-twitter,
+      .fa-github {
+        color: black;
+        transition: 0.4s;
+      }
     }
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
-    li {
-      font-size: 32px;
-      padding: 16px;
-      transition: 0.4s;
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      padding: 2rem 0;
+      li {
+        font-size: 32px;
+        padding: 16px;
+        transition: 0.4s;
+      }
     }
   }
 }
 
 @include pc-screen() {
-  .Footer__left {
+  .Footer__Left {
     flex: 1;
     border-right: 0;
     padding-left: 0;
@@ -126,19 +128,19 @@ export default {
     flex-direction: column;
     text-align: center;
   }
-  .Footer__left {
+  .Footer__Left {
     flex: 1;
     border-right: 0;
     padding-left: 0;
     margin-left: 0;
   }
-  .Footer__right {
+  .Footer__Right {
     background: #eee;
     a {
       color: black;
     }
   }
-  .Footer__sns {
+  .Footer__SNS {
     a {
       .fa-facebook,
       .fa-twitter,

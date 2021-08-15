@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <ul class="d-flex breadList">
-      <li>
-        <router-link to="/">
-          Home
-        </router-link>
-        <span class="mx-2"> > </span>
-      </li>
-      <li>
-        <router-link :to="parent ? `/${parent.toLowerCase()}/` : '/news/'">
-          {{ parent || 'News' }}
-        </router-link>
-        <span v-if="title" class="mx-2"> > </span>
-      </li>
-      <li v-if="title">
-        <router-link :to="`/news/${this.$route.params.id}`">
-          {{ title | truncate(10) }}
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <ul class="BreadList">
+    <li>
+      <router-link to="/">
+        Home
+      </router-link>
+      <span class="mx-2"> > </span>
+    </li>
+    <li>
+      <router-link :to="parent ? `/${parent.toLowerCase()}/` : '/news/'">
+        {{ parent || 'News' }}
+      </router-link>
+      <span v-if="title" class="mx-2"> > </span>
+    </li>
+    <li v-if="title">
+      <router-link :to="`/news/${this.$route.params.id}`">
+        {{ title | truncate(10) }}
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -41,7 +39,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.breadList {
+.BreadList {
+  display: flex;
   li {
     text-decoration: none;
     list-style: none;

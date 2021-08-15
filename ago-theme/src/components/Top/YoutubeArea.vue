@@ -1,11 +1,11 @@
 <template>
-  <section class="Top__youtubeArea">
+  <section class="Top__YoutubeArea">
     <section-title
-      class="youtubeArea__header"
+      class="Top__YoutubeArea__Header"
       title="PERFORMANCE"
       subtitle="過去の演奏"
     />
-    <div class="movie_frame">
+    <div class="Top__YoutubeArea__MovieFrame">
       <iframe
         src="https://www.youtube.com/embed/vJpIiOI4UYw"
         frameborder="0"
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.youtubeArea__header {
+.Top__YoutubeArea__Header {
   @include pc-screen() {
     padding: 2rem 6rem;
   }
@@ -36,7 +36,7 @@ export default {
   }
 }
 
-.movie_frame {
+.Top__YoutubeArea__MovieFrame {
   position: relative;
   height: 0;
   margin: 0 auto;
@@ -49,19 +49,19 @@ export default {
   }
 }
 @include pc-screen() {
-  .Top__youtubeArea {
+  .Top__YoutubeArea {
     padding-bottom: 2rem;
   }
-  .movie_frame {
+  .Top__YoutubeArea__MovieFrame {
     width: 80%;
     padding-top: 40%;
   }
 }
 @include sp-screen() {
-  .Top__youtubeArea {
+  .Top__YoutubeArea {
     margin-bottom: 2rem;
   }
-  .movie_frame {
+  .Top__YoutubeArea__MovieFrame {
     width: 100%;
     padding-top: 60%;
   }

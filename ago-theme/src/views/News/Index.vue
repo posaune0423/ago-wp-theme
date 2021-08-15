@@ -1,9 +1,9 @@
 <template>
   <div>
     <lower-header title="NEWS" subtitle="お知らせ" />
-    <div class="newsList__outerWrap">
+    <div class="NewsList__OuterWrap">
       <bread-list />
-      <div class="newsList__wrap">
+      <div class="NewsList__Wrap">
         <news-list class="mt-4" />
       </div>
     </div>
@@ -35,12 +35,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.newsList__outerWrap {
+.NewsList__OuterWrap {
   background-color: $c_gray-light;
   padding: 2rem 0;
 }
 
-.newsList__wrap {
+.NewsList__Wrap {
   @include pc-screen() {
     padding: 2rem 9rem;
   }
