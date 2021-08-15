@@ -8,6 +8,7 @@
         </p>
         <v-text-field
           v-model="name"
+          color="success"
           class="my-2"
           :error-messages="nameErrors"
           label="お名前 *"
@@ -17,6 +18,7 @@
         ></v-text-field>
         <v-text-field
           v-model="email"
+          color="success"
           class="my-2"
           :error-messages="emailErrors"
           label="メールアドレス *"
@@ -26,6 +28,7 @@
         ></v-text-field>
         <v-text-field
           v-model="subject"
+          color="success"
           class="my-2"
           :error-messages="subjectErrors"
           label="件名 *"
@@ -35,6 +38,7 @@
         ></v-text-field>
         <v-textarea
           v-model="body"
+          color="success"
           class="my-2"
           :error-messages="bodyErrors"
           label="お問い合わせ内容 *"
