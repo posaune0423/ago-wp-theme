@@ -1,5 +1,10 @@
 <template>
   <div class="movie_container">
+    <section-title
+      class="youtubeArea__header"
+      title="PERFORMANCE"
+      subtitle="過去の演奏"
+    />
     <div class="movie_frame">
       <iframe
         src="https://www.youtube.com/embed/vJpIiOI4UYw"
@@ -12,13 +17,28 @@
 </template>
 
 <script>
-export default {};
+import SectionTitle from '@/components/molecules/SectionTitle';
+export default {
+  name: 'YoutubeArea',
+  components: {
+    SectionTitle
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .movie_container {
   margin-bottom: 40px;
 }
+.youtubeArea__header {
+  @include pc-screen() {
+    padding: 2rem 6rem;
+  }
+  @include sp-screen() {
+    padding: 2rem 1rem;
+  }
+}
+
 .movie_frame {
   position: relative;
   height: 0;
