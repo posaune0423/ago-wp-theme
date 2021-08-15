@@ -1,15 +1,17 @@
 <template>
-    <div>
-
-    </div>
+  <div>
+    <lower-header title="CONCERT" subtitle="演奏会情報" />
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'ConcertIndex'
-    }
+import LowerHeader from '@/components/molecules/LowerHeader';
+export default {
+  name: 'ConcertIndex',
+  components: {
+    LowerHeader
+  }
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
