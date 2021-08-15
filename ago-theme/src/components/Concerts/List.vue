@@ -30,6 +30,11 @@ export default {
       total: null
     };
   },
+  computed: {
+    loading() {
+      return this.$store.getters['loader/loading'];
+    }
+  },
   methods: {
     getConcerts(page = 1) {
       this.$axios.get(`wp/v2/concerts?per_page=3&page=${page}`).then((res) => {
@@ -54,12 +59,18 @@ export default {
       }
     }
   },
-  created() {
-    this.getConcerts(this.$route.query.page || 1);
+  mounted() {
+    this.$store
+      .dispatch('loader/startLoad')
+      .then(() => this.getConcerts(this.$route.query.page || 1))
+      .then(() => this.$store.dispatch('loader/endLoad'));
   },
   watch: {
     $route: function() {
-      this.getConcerts(this.$route.query.page || 1);
+      this.$store
+        .dispatch('loader/startLoad')
+        .then(() => this.getConcerts(this.$route.query.page || 1))
+        .then(() => this.$store.dispatch('loader/endLoad'));
     }
   }
 };
