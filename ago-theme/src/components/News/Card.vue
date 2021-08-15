@@ -26,18 +26,7 @@ export default {
   props: ['post'],
   data: () => ({
     show: false
-  }),
-  filters: {
-    truncate(val, len) {
-      if (val) {
-        const length = len ? parseInt(len, 10) : 20;
-        if (val.length <= length) {
-          return val;
-        }
-        return val.substring(0, length) + '...';
-      }
-    }
-  }
+  })
 };
 </script>
 

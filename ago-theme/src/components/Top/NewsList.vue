@@ -38,6 +38,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.newsList__container {
+  padding-bottom: 2rem;
+}
 .newsList__header {
   @include pc-screen() {
     padding: 2rem 6rem;
