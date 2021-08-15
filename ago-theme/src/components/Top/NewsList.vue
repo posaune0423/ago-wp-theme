@@ -2,7 +2,7 @@
   <div class="newsList__container">
     <section-title class="newsList__header" title="NEWS" subtitle="お知らせ" />
     <div class="newsCard__container">
-      <news-card v-for="post in posts" :key="post.id" :post="post" />
+      <news-card v-for="news in topNews" :key="news.id" :post="news" />
     </div>
     <div class="text-center btn_container">
       <v-btn color="success" block x-large to="/news/">VIEW MORE</v-btn>
@@ -20,22 +20,10 @@ export default {
     SectionTitle,
     NewsCard
   },
-  data() {
-    return {
-      posts: []
-    };
-  },
-  methods: {
-    getPosts() {
-      this.$axios
-        .get('wp/v2/posts', { params: { per_page: 3 } })
-        .then((res) => {
-          this.posts = res.data;
-        });
+  computed: {
+    topNews() {
+      return this.$store.getters['news/getNews'];
     }
-  },
-  created() {
-    this.getPosts();
   }
 };
 </script>

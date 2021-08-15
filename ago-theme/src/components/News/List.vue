@@ -45,12 +45,14 @@ export default {
     }
   },
   methods: {
-    async getPosts(page = 1) {
-      this.$axios.get(`wp/v2/posts?per_page=6&page=${page}`).then((res) => {
-        this.current = page;
-        this.posts = res.data;
-        this.makePagination(res);
-      });
+    async getPosts(page = 1, limit = 3) {
+      this.$axios
+        .get(`wp/v2/posts?per_page=${limit}&page=${page}`)
+        .then((res) => {
+          this.posts = res.data;
+          this.current = page;
+          this.makePagination(res);
+        });
     },
     makePagination(data) {
       this.total = data.headers['x-wp-totalpages'];

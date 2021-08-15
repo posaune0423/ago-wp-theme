@@ -20,6 +20,15 @@ export default {
     TopNewsList,
     YoutubeArea,
     HeroArea
+  },
+  methods: {
+    setupTopPage() {
+      this.$store.dispatch('news/fetchNews');
+      this.$store.dispatch('concerts/fetchConcerts');
+    }
+  },
+  mounted() {
+    this.setupTopPage();
   }
 };
 </script>

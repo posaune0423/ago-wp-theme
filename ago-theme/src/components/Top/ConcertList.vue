@@ -2,12 +2,12 @@
   <div class="concertList__container">
     <section-title
       class="concertList__header"
-      title="CONCERT"
+      title="CONCERTS"
       subtitle="演奏会情報"
     />
     <div class="concertCard__container">
       <concert-card
-        v-for="concert in concerts"
+        v-for="concert in topConcerts"
         :key="concert.id"
         :concert="concert"
       />
@@ -28,22 +28,10 @@ export default {
     SectionTitle,
     ConcertCard
   },
-  data() {
-    return {
-      concerts: []
-    };
-  },
-  methods: {
-    getConcerts() {
-      this.$axios
-        .get('wp/v2/concerts', { params: { per_page: 3 } })
-        .then((res) => {
-          this.concerts = res.data;
-        });
+  computed: {
+    topConcerts() {
+      return this.$store.getters['concerts/getConcerts'];
     }
-  },
-  created() {
-    this.getConcerts();
   }
 };
 </script>
