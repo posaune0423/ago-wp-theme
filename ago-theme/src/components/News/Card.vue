@@ -1,14 +1,12 @@
 <template>
-  <v-card class="mx-auto" max-width="344" :to="'/news/' + post.id" hover>
+  <v-card class="mx-auto" width="344" :to="'/news/' + post.id" hover>
     <v-img :src="post.featured_image.src" height="200px"></v-img>
 
     <v-card-title>
       {{ post.title.rendered }}
     </v-card-title>
 
-    <v-card-text class="text-right">
-      {{ post.date }}
-    </v-card-text>
+    <v-card-subtitle>{{ post.excerpt }} </v-card-subtitle>
 
     <v-card-text>
       <v-chip v-for="(name, i) in post.category_name" :key="i" small>
@@ -16,7 +14,9 @@
       </v-chip>
     </v-card-text>
 
-    <v-card-subtitle v-html="post.excerpt.rendered"> </v-card-subtitle>
+    <v-card-text class="text-right">
+      {{ post.date }}
+    </v-card-text>
   </v-card>
 </template>
 
@@ -26,7 +26,18 @@ export default {
   props: ['post'],
   data: () => ({
     show: false
-  })
+  }),
+  filters: {
+    truncate(val, len) {
+      if (val) {
+        const length = len ? parseInt(len, 10) : 20;
+        if (val.length <= length) {
+          return val;
+        }
+        return val.substring(0, length) + '...';
+      }
+    }
+  }
 };
 </script>
 
