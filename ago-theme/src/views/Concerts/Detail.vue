@@ -85,12 +85,8 @@ export default {
 <style lang="scss" scoped>
 .ConcertsDetail {
   background-color: $c_gray-light;
-  @include pc-screen() {
-    padding: 2rem 0;
-  }
-  @include sp-screen() {
-    padding: 1rem 0;
-  }
+  padding: 2rem 0;
+
   &__Inner {
     background-color: $c_gray-light;
     @include pc-screen() {
