@@ -2,11 +2,27 @@
   <div>
     <lower-header title="NEWS" subtitle="お知らせ" />
     <div class="newsDetail__container">
-      <bread-list :title="post.title.rendered" />
+      <v-skeleton-loader
+        v-if="!post.title"
+        class="mx-auto my-2"
+        width="400"
+        height="1rem"
+        type="heading"
+      ></v-skeleton-loader>
+      <bread-list v-else :title="post.title.rendered" />
       <div class="newsDetail__wrap">
-        <h1 class="my-2 newsTitle">{{ post.title.rendered }}</h1>
+        <v-skeleton-loader
+          v-if="!post.title"
+          class="mx-auto my-2"
+          width="600"
+          height="1.5rem"
+          type="heading"
+        ></v-skeleton-loader>
+        <h1 v-else class="my-2 newsTitle">
+          {{ post.title.rendered }}
+        </h1>
         <div class="my-2 newsDate gray--text">{{ post.date }}</div>
-        <div class="my-3 newsDetail__category">
+        <div class="my-3 newsCategory">
           <v-chip
             v-for="(name, i) in post.category_name"
             :key="i"
@@ -16,10 +32,20 @@
             {{ name }}
           </v-chip>
         </div>
-        <div class="newsDetail__image">
+        <v-skeleton-loader
+          v-if="!post.featured_image"
+          class="mx-auto"
+          width="94%"
+          type="image"
+        ></v-skeleton-loader>
+        <div v-else class="newsDetail__image">
           <v-img :src="post.featured_image.src" />
         </div>
-        <post-content class="mt-3" :content="post.content.rendered" />
+        <post-content
+          v-if="post.content"
+          class="mt-3"
+          :content="post.content.rendered"
+        />
       </div>
     </div>
   </div>
@@ -31,7 +57,7 @@ import BreadList from '@/components/News/BreadList';
 import LowerHeader from '@/components/molecules/LowerHeader';
 
 export default {
-  name: 'PostDetail',
+  name: 'NewsDetail',
   components: { PostContent, BreadList, LowerHeader },
   data() {
     return {
@@ -53,7 +79,20 @@ export default {
 
 <style lang="scss" scoped>
 .newsDetail__container {
-  padding: 1rem 0;
+  background-color: $c_gray-light;
+  @include pc-screen() {
+    padding: 2rem 0;
+  }
+  @include sp-screen() {
+    padding: 1rem 0;
+  }
+}
+.newsDetail__wrap {
+  background-color: $c_gray-light;
+  @include pc-screen() {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .newsTitle {
@@ -72,7 +111,7 @@ export default {
   padding-right: 1rem;
 }
 
-.newsDetail__category {
+.newsCategory {
   padding: 0.7rem;
 }
 
@@ -86,20 +125,6 @@ export default {
   }
   @include pc-screen() {
     width: 70%;
-  }
-}
-
-.newsDetail__container {
-  background-color: $c_gray-light;
-  @include pc-screen() {
-    padding: 2rem 0;
-  }
-}
-.newsDetail__wrap {
-  background-color: $c_gray-light;
-  @include pc-screen() {
-    width: 50%;
-    margin: 0 auto;
   }
 }
 </style>

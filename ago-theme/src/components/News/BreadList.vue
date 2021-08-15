@@ -8,8 +8,8 @@
         <span class="mx-2"> > </span>
       </li>
       <li>
-        <router-link to="/news/">
-          News
+        <router-link :to="parent ? `/${parent.toLowerCase()}/` : '/news/'">
+          {{ parent || 'News' }}
         </router-link>
         <span v-if="title" class="mx-2"> > </span>
       </li>
@@ -25,7 +25,7 @@
 <script>
 export default {
   name: 'BreadList',
-  props: ['title'],
+  props: ['title', 'parent'],
   filters: {
     truncate: function(val, len) {
       if (val) {

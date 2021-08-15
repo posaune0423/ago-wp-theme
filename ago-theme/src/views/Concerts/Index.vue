@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lower-header title="CONCERT" subtitle="演奏会情報" />
+    <lower-header title="CONCERTS" subtitle="演奏会情報" />
     <v-container class="my-4">
       <concert-list />
     </v-container>
