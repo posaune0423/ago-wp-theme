@@ -44,6 +44,15 @@ function add_thumbnail_to_JSON()
             'schema' => null,
         )
     );
+    register_rest_field(
+        'concerts',
+        'featured_image', //NAME OF THE NEW FIELD TO BE ADDED - you can call this anything
+        array(
+            'get_callback' => 'get_image',
+            'update_callback' => null,
+            'schema' => null,
+        )
+    );
 }
 function get_image($object, $field_name, $request)
 {
@@ -167,6 +176,13 @@ if (!function_exists('register_rest_format_date')) {
     {
         register_rest_field(
             'post',
+            'date',
+            array(
+                'get_callback' => 'get_format_date'
+            )
+        );
+        register_rest_field(
+            'concerts',
             'date',
             array(
                 'get_callback' => 'get_format_date'
