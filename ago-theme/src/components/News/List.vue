@@ -45,7 +45,7 @@ export default {
     }
   },
   methods: {
-    async getPosts(page = 1, limit = 3) {
+    async getPosts(page = 1, limit = 6) {
       this.$axios
         .get(`wp/v2/posts?per_page=${limit}&page=${page}`)
         .then((res) => {
