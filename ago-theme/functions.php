@@ -87,6 +87,78 @@ if (!function_exists('register_rest_category_name')) {
 add_action('rest_api_init', 'register_rest_category_name');
 
 
+// Custom Excerpt
+if (!function_exists('modify_excerpt')) {
+    function modify_excerpt()
+    {
+        register_rest_field(
+            'post',
+            'excerpt',
+            array(
+                'get_callback' => 'get_modified_excerpt'
+            )
+        );
+    }
+    function get_modified_excerpt($object)
+    {
+        $max_length = 30;
+        if (!empty($object['excerpt'])) {
+            return mb_substr(strip_tags($object['excerpt']['rendered']), 0, $max_length) . '...';
+        } else {
+            return null;
+        }
+    }
+}
+add_action('rest_api_init', 'modify_excerpt');
+
+
+// // Custom Title
+// if (!function_exists('modify_title')) {
+//     function modify_title()
+//     {
+//         register_rest_field(
+//             'post',
+//             'title',
+//             array(
+//                 'get_callback' => 'get_modified_title'
+//             )
+//         );
+//     }
+//     function get_modified_title($object)
+//     {
+//         if (!empty($object['title'])) {
+//             return $object['title']['rendered'];
+//         } else {
+//             return null;
+//         }
+//     }
+// }
+// add_action('rest_api_init', 'modify_title');
+
+// // Custom Content
+// if (!function_exists('modify_content')) {
+//     function modify_content()
+//     {
+//         register_rest_field(
+//             'post',
+//             'content',
+//             array(
+//                 'get_callback' => 'get_modified_content'
+//             )
+//         );
+//     }
+//     function get_modified_content($object)
+//     {
+//         if (!empty($object['content'])) {
+//             return $object['content']['rendered'];
+//         } else {
+//             return null;
+//         }
+//     }
+// }
+// add_action('rest_api_init', 'modify_content');
+
+
 // Format Date
 // Default : date: "2021-07-16T17:48:46",
 // Changed to : date: "July 16, 2021",
@@ -103,7 +175,7 @@ if (!function_exists('register_rest_format_date')) {
     }
     function get_format_date($object)
     {
-        $date = get_the_date('F j, Y', $object['id']);
+        $date = get_the_date('Y年n月d日', $object['id']);
         return $date;
     }
 }
