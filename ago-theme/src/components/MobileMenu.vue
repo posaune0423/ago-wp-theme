@@ -46,7 +46,7 @@ export default {
   justify-content: center;
 
   a {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: #757575;
     text-decoration: none;
   }
@@ -58,7 +58,6 @@ export default {
     li {
       padding-top: 1rem;
       padding-bottom: 1rem;
-      height: 57px;
     }
   }
 }
