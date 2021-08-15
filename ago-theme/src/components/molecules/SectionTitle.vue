@@ -42,7 +42,7 @@ export default {
       background-color: #222;
       content: '';
       @include pc-screen() {
-        bottom: 3.6vw;
+        bottom: 3vw;
         width: 16rem;
       }
       @include sp-screen() {
