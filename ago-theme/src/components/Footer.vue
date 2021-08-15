@@ -3,14 +3,15 @@
     <div id="left-footer">
       <h3>Quick link</h3>
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about/">About</router-link></li>
-        <li><router-link to="/instructors/">Instructors</router-link></li>
-        <li><router-link to="/concerts/">Concerts</router-link></li>
+        <li><router-link to="/">HOME</router-link></li>
+        <li><router-link to="/about/">ABOUT</router-link></li>
+        <li><router-link to="/news/">NEWS</router-link></li>
+        <li><router-link to="/instructors/">INSTRUCTORS</router-link></li>
+        <li><router-link to="/concerts/">CONCERTS</router-link></li>
         <li>
-          <a href="https://agonew2019.wixsite.com/2020-ago-new">Welcome</a>
+          <a href="https://agonew2019.wixsite.com/2020-ago-new">WELCOME</a>
         </li>
-        <li><router-link to="/contact/">Contact</router-link></li>
+        <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
     </div>
     <div id="right-footer">
@@ -55,16 +56,16 @@ export default {
 <style lang="scss">
 footer {
   background-color: #eceae6;
-  padding: 8px;
-  color: #454545;
+  padding: 2rem;
+  color: $c_black-light;
   display: flex;
   a {
-    color: #454545 !important;
+    color: $c_black-light !important;
     font-weight: 700;
     text-decoration: none;
   }
   h3 {
-    color: #454545;
+    color: $c_black-light;
     margin-top: 18px;
     margin-bottom: 18px;
     font-size: 1.17em;
@@ -80,6 +81,9 @@ footer {
     padding: 0;
     list-style: none;
     line-height: 1.5;
+    li {
+      margin: 1rem auto;
+    }
   }
 }
 #right-footer {
@@ -109,7 +113,7 @@ footer {
   }
 }
 
-@media (min-width: 719) {
+@include pc-screen() {
   #left-footer {
     flex: 1;
     border-right: 0;
@@ -117,7 +121,7 @@ footer {
     margin-left: 80;
   }
 }
-@media (max-width: 719px) {
+@include sp-screen() {
   footer {
     flex-direction: column;
     text-align: center;
