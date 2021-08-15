@@ -3,3 +3,8 @@
 *::after {
   box-sizing: border-box;
 }
+
+.v-application .success {
+  background-color: $c_green !important;
+  border-color: $c_green !important;
+}
