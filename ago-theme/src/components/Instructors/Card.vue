@@ -1,30 +1,38 @@
 <template>
   <v-card class="mx-auto trainer_card">
     <v-img
-      :src="image"
+      :src="person.image"
       height="280px"
       alt="トレーナー画像"
-      :position="position || 'center'"
+      :position="person.position || 'center'"
     ></v-img>
 
     <v-card-title>
-      {{ name }}
+      {{ person.name }}
     </v-card-title>
 
-    <v-card-subtitle> {{ belonging }} | {{ part }} </v-card-subtitle>
+    <v-card-subtitle>
+      {{ person.belonging }} | {{ person.part }}
+    </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn icon class="align-end" @click="show = !show">
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+      <v-btn
+        icon
+        class="align-end"
+        @click.native="person.visible = !person.visible"
+      >
+        <v-icon>{{
+          person.visible ? 'mdi-chevron-up' : 'mdi-chevron-down'
+        }}</v-icon>
       </v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <div v-show="show">
+      <div v-show="person.visible">
         <v-divider></v-divider>
 
         <v-card-text>
-          {{ description }}
+          {{ person.description }}
         </v-card-text>
       </div>
     </v-expand-transition>
@@ -33,10 +41,7 @@
 
 <script>
 export default {
-  props: ['name', 'image', 'description', 'part', 'belonging', 'position'],
-  data: () => ({
-    show: false
-  })
+  props: ['person']
 };
 </script>
 
