@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <div id="left-footer">
+  <footer class="Footer">
+    <div class="Footer__left">
       <h3>Quick link</h3>
       <ul>
         <li><router-link to="/">HOME</router-link></li>
@@ -14,9 +14,9 @@
         <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
     </div>
-    <div id="right-footer">
+    <div class="Footer__right">
       <h3>Follow us on</h3>
-      <div id="social-media-footer">
+      <div class="Footer__sns">
         <ul>
           <li>
             <a href="https://www.facebook.com/aoyamagakuinorchestra/">
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss">
-footer {
+.Footer {
   background-color: #eceae6;
   padding: 2rem;
   color: $c_black-light;
@@ -73,7 +73,7 @@ footer {
   }
 }
 
-#left-footer {
+.Footer__left {
   flex: 1;
   border-left: 32px;
   padding-left: 80px;
@@ -86,12 +86,12 @@ footer {
     }
   }
 }
-#right-footer {
+.Footer__right {
   flex: 2;
   padding: 8px;
   text-align: center;
 }
-#social-media-footer {
+.Footer__sns {
   a {
     .fa-facebook,
     .fa-twitter,
@@ -114,7 +114,7 @@ footer {
 }
 
 @include pc-screen() {
-  #left-footer {
+  .Footer__left {
     flex: 1;
     border-right: 0;
     padding-left: 0;
@@ -126,19 +126,19 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  #left-footer {
+  .Footer__left {
     flex: 1;
     border-right: 0;
     padding-left: 0;
     margin-left: 0;
   }
-  #right-footer {
+  .Footer__right {
     background: #eee;
     a {
       color: black;
     }
   }
-  #social-media-footer {
+  .Footer__sns {
     a {
       .fa-facebook,
       .fa-twitter,

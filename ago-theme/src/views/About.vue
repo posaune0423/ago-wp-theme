@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
+  <div class="About">
     <lower-header title="ABOUT" subtitle="私達について" />
-    <section class="about__whoWeAre">
-      <h2 class="section_title">
-        <span class="section_title__body"
+    <section class="About__WhoWeAre">
+      <h2 class="SectionTitle">
+        <span class="SectionTitle__Body"
           >Who we <span class="-green">are</span></span
         >
-        <span class="section_title__subtitle">青山管弦楽団とは</span>
+        <span class="SectionTitle__Subtitle">青山管弦楽団とは</span>
       </h2>
       <p>
         青山学院管弦楽団は、青山学院大学文化連合会オーケストラ部、青山学院女子短期大学オーケストラ部が一緒になって活動している団体です。
@@ -24,7 +24,7 @@
       </p>
     </section>
 
-    <div class="image_container">
+    <div class="Section__Image">
       <figure>
         <img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/0042_Cb15.jpg"
@@ -34,12 +34,12 @@
       </figure>
     </div>
 
-    <section class="about__regularConcert">
-      <h2 class="section_title">
-        <span class="section_title__body"
+    <section class="About__RegularConcert">
+      <h2 class="SectionTitle">
+        <span class="SectionTitle__Body"
           ><span class="-green">Regular</span> Concert</span
         >
-        <span class="section_title__subtitle">定期演奏会</span>
+        <span class="SectionTitle__Subtitle">定期演奏会</span>
       </h2>
       <p>
         年2回、5月と11月頃に開催する当楽団の最大の行事です。会場は都内もしくは近郊のホールを利用させていただき、毎回多くのお客様にご来場いただいております。この数年では東京オペラシティ、ミューザ川崎、横浜みなとみらいホール、文京シビック大ホールなどで演奏会を行いました。演奏会終了後はレセプションが行われ、演奏会と同じくとても盛り上がります。
@@ -47,7 +47,7 @@
       </p>
     </section>
 
-    <div class="image_container">
+    <div class="Section__Image">
       <figure>
         <img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
@@ -57,12 +57,12 @@
       </figure>
     </div>
 
-    <section class="about__messiah">
-      <h2 class="section_title">
-        <span class="section_title__body"
+    <section class="About__Messiah">
+      <h2 class="SectionTitle">
+        <span class="SectionTitle__Body"
           >Messiah <span class="-green">Concert</span></span
         >
-        <span class="section_title__subtitle">オール青山メサイア公演</span>
+        <span class="SectionTitle__Subtitle">オール青山メサイア公演</span>
       </h2>
       <p>
         オール青山メサイア公演は、毎年12月に青山学院のクリスマスの行事として1976年から行われています。普段は別々に活動している学内7つの音楽団体（合唱６、管弦楽１）が一堂に集まり、G.F.ヘンデル作曲のオラトリオ「メサイア」を演奏します。
@@ -71,7 +71,7 @@
       </p>
     </section>
 
-    <div class="image_container">
+    <div class="Section__Image">
       <figure>
         <img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
@@ -81,13 +81,13 @@
       </figure>
     </div>
 
-    <section class="about__aoyamaFestival">
-      <h2 class="section_title">
-        <span class="section_title__body"
+    <section class="About__AoyamaFestival">
+      <h2 class="SectionTitle">
+        <span class="SectionTitle__Body"
           ><span class="-green">Aoyama</span> Festival</span
         >
 
-        <span class="section_title__subtitle">青山祭</span>
+        <span class="SectionTitle__Subtitle">青山祭</span>
       </h2>
 
       <p>
@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.about {
+.About {
   section {
     @include pc-screen() {
       padding: 3rem;
@@ -139,19 +139,19 @@ export default {
       font-size: 0.9rem;
     }
   }
-  &__whoWeAre {
+  &__WhoWeAre {
     background-color: $c_gray-light;
   }
-  &__messiah {
+  &__Messiah {
     color: $c_white;
     background-color: $c_black;
   }
-  &__aoyamaFestival {
+  &__AoyamaFestival {
     color: $c_white;
     background-color: rgba(0, 74, 112, 0.9);
   }
 }
-.section_title {
+.SectionTitle {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -164,7 +164,7 @@ export default {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  &__body {
+  &__Body {
     @include pc-screen() {
       font-size: 2.4rem;
     }
@@ -187,7 +187,7 @@ export default {
       }
     }
   }
-  &__subtitle {
+  &__Subtitle {
     margin-left: 1rem;
     @include pc-screen() {
       margin-top: 2rem;
@@ -201,7 +201,7 @@ export default {
   }
 }
 
-.image_container {
+.Section__Image {
   @include pc-screen() {
     height: 500px;
     img {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <article>
     <lower-header title="NEWS" subtitle="お知らせ" />
     <div class="newsDetail__container">
       <v-skeleton-loader
@@ -39,7 +39,7 @@
           type="image"
         ></v-skeleton-loader>
         <div v-else class="newsDetail__image">
-          <v-img :src="post.featured_image.src" />
+          <v-img :src="post.featured_image.src" alt="演奏会画像" />
         </div>
         <post-content
           v-if="post.content"
@@ -48,7 +48,7 @@
         />
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

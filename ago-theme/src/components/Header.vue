@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <nav>
-      <div id="logo-img">
+  <header class="Header">
+    <nav class="Header__Nav">
+      <div class="Header__Logo">
         <router-link to="/">
-          <img src="@/assets/images/logo.jpg" alt="Logo" />
+          <img src="@/assets/images/logo.jpg" alt="ロゴ画像" />
         </router-link>
       </div>
       <ul>
@@ -16,17 +16,16 @@
         </li>
         <li><router-link to="/contact/">CONTACT</router-link></li>
       </ul>
-      <span id="menu-icon">
+      <span class="Header__Menu">
         <menu-button />
       </span>
     </nav>
 
     <mobile-menu />
-  </div>
+  </header>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import MobileMenu from '@/components/MobileMenu';
 import MenuButton from '@/components/molecules/MenuButton';
 
@@ -37,13 +36,15 @@ export default {
     MenuButton
   },
   computed: {
-    ...mapGetters('menu', ['getIsActive'])
+    isActive() {
+      return this.$store.getters['menu/getIsActive'];
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-nav {
+.Header__Nav {
   top: 0;
   background: #fff;
   width: 100%;
@@ -93,7 +94,7 @@ nav {
   }
 }
 
-#logo-img {
+.Header__Logo {
   display: flex;
   align-items: center;
   transition: 0.4s;
@@ -115,7 +116,7 @@ nav {
   }
 }
 
-#menu-icon {
+.Header__Menu {
   padding-top: 5px;
   height: 100%;
   line-height: 1;

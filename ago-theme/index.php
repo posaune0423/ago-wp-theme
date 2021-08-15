@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-
+<html lang="ja">
 <head>
     <title>青山学院管弦楽団</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +10,12 @@
     <link rel="preload" href="/wp-content/themes/ago-theme/dist/css/style.css" as="style" onload="this.rel='stylesheet'">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="青山学院管弦楽団のHPです。">
+    <meta name="keywords" content="オーケストラ,青山学院,大学,オケ,青学" />
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
     <div id="app"></div>
     <?php get_footer(); ?>
 

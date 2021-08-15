@@ -1,5 +1,5 @@
 <template>
-  <div id="mobile_menu" :class="{ active: getIsActive }">
+  <nav class="Mobile__Menu" :class="{ active: isActive }">
     <ul>
       <li><router-link to="/">HOME</router-link></li>
       <li><router-link to="/about/">ABOUT</router-link></li>
@@ -11,21 +11,22 @@
       </li>
       <li><router-link to="/contact/">CONTACT</router-link></li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 export default {
   name: 'MobileMenu',
   computed: {
-    ...mapGetters('menu', ['getIsActive'])
+    isActive() {
+      return this.$store.getters['menu/getIsActive'];
+    }
   }
 };
 </script>
 
 <style scoped lang="scss">
-#mobile_menu {
+.Mobile__Menu {
   position: fixed;
   bottom: 0;
   left: 0;

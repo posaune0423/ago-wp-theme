@@ -1,5 +1,5 @@
 <template>
-  <div class="concertList__container">
+  <section class="Top__newsList">
     <section-title
       class="concertList__header"
       title="CONCERTS"
@@ -15,7 +15,7 @@
     <div class="text-center btn_container">
       <v-btn color="success" block x-large to="/concerts/">VIEW MORE</v-btn>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.concertList__container {
+.Top__newsList {
   padding-bottom: 2rem;
   background-color: $c_gray-light;
 }

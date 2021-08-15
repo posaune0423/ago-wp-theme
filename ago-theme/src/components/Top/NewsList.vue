@@ -1,5 +1,5 @@
 <template>
-  <div class="newsList__container">
+  <section class="Top__newsList">
     <section-title class="newsList__header" title="NEWS" subtitle="お知らせ" />
     <div class="newsCard__container">
       <news-card v-for="news in topNews" :key="news.id" :post="news" />
@@ -7,7 +7,7 @@
     <div class="text-center btn_container">
       <v-btn color="success" block x-large to="/news/">VIEW MORE</v-btn>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.newsList__container {
+.Top__newsList {
   padding-bottom: 2rem;
 }
 .newsList__header {

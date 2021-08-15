@@ -1,5 +1,5 @@
 <template>
-  <div class="top_container">
+  <div class="Top">
     <hero-area />
     <top-news-list />
     <top-concert-list />
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top_container {
+.Top {
   @include pc-screen() {
     margin-top: $h_header;
   }

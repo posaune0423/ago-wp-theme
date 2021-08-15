@@ -1,13 +1,13 @@
-<template>
-  <div class="lower_header">
-    <h1 class="header_title">
-      {{ title }}
+<template functional>
+  <div class="LowerHeader">
+    <h1 class="LowerHeader__Title">
+      {{ props.title }}
     </h1>
-    <span class="header_subtitle">
-      {{ subtitle }}
+    <span class="LowerHeader__Subtitle">
+      {{ props.subtitle }}
     </span>
-    <p class="bg-text">
-      {{ title }}
+    <p class="LowerHeader__BgText">
+      {{ props.title }}
     </p>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.lower_header {
+.LowerHeader {
   margin-top: $h_header;
   position: relative;
 
@@ -37,44 +37,42 @@ export default {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-}
 
-.header_title {
-  @include pc-screen {
-    font-size: 4rem;
+  &__Title {
+    @include pc-screen {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    @include sp-screen {
+      font-size: 2rem;
+    }
+  }
+  &__Subtitle {
+    margin-left: 0.8rem;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
-    margin-bottom: 1rem;
+    @include pc-screen {
+      font-size: 0.9rem;
+    }
+    @include sp-screen {
+      font-size: 0.7rem;
+    }
   }
-
-  @include sp-screen {
-    font-size: 2rem;
-  }
-}
-
-.header_subtitle {
-  margin-left: 0.8rem;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
-  @include pc-screen {
-    font-size: 0.9rem;
-  }
-  @include sp-screen {
-    font-size: 0.7rem;
-  }
-}
-
-.bg-text {
-  @include pc-screen {
-    font-size: 14rem;
-    top: 1.8rem;
-    left: 31vw;
-    color: #fff;
-    -webkit-text-stroke: 2px #cfcfcf;
-    position: absolute;
-    opacity: 0.3;
-  }
-  @include sp-screen {
-    display: none;
+  &__BgText {
+    @include pc-screen {
+      font-size: 14rem;
+      top: 1.8rem;
+      left: 31vw;
+      color: #fff;
+      -webkit-text-stroke: 2px #cfcfcf;
+      position: absolute;
+      opacity: 0.3;
+    }
+    @include sp-screen {
+      display: none;
+    }
   }
 }
 </style>

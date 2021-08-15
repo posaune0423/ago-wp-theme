@@ -1,6 +1,11 @@
 <template>
   <v-card class="mx-auto trainer_card">
-    <v-img :src="image" height="280px" :position="position || 'center'"></v-img>
+    <v-img
+      :src="image"
+      height="280px"
+      alt="トレーナー画像"
+      :position="position || 'center'"
+    ></v-img>
 
     <v-card-title>
       {{ name }}

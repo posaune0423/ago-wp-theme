@@ -1,5 +1,5 @@
 <template>
-  <div class="movie_container">
+  <section class="Top__youtubeArea">
     <section-title
       class="youtubeArea__header"
       title="PERFORMANCE"
@@ -13,7 +13,7 @@
         allowfullscreen
       ></iframe>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ export default {
   }
 }
 @include pc-screen() {
-  .movie_container {
+  .Top__youtubeArea {
     padding-bottom: 2rem;
   }
   .movie_frame {
@@ -58,7 +58,7 @@ export default {
   }
 }
 @include sp-screen() {
-  .movie_container {
+  .Top__youtubeArea {
     margin-bottom: 2rem;
   }
   .movie_frame {

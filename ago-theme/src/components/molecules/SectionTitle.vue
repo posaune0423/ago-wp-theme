@@ -1,8 +1,8 @@
 <template>
-  <div class="section_title__container">
-    <h2 class="section_title">
-      <span class="section_title__body">{{ title }}</span>
-      <span class="section_title__subtitle">{{ subtitle }}</span>
+  <div class="Section__Title__Container">
+    <h2 class="Section__Title">
+      <span class="Section__Title__Body">{{ title }}</span>
+      <span class="Section__Title__Subtitle">{{ subtitle }}</span>
     </h2>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section_title {
+.Section__Title {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ export default {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  &__body {
+  &__Body {
     @include pc-screen() {
       font-size: 2.4rem;
     }
@@ -51,7 +51,7 @@ export default {
       }
     }
   }
-  &__subtitle {
+  &__Subtitle {
     margin-left: 1rem;
     @include pc-screen() {
       margin-top: 2rem;
