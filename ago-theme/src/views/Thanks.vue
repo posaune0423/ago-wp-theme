@@ -23,6 +23,15 @@ import LowerHeader from '@/components/molecules/LowerHeader';
 export default {
   components: {
     LowerHeader
+  },
+  head: {
+    title: function() {
+      return {
+        inner: '青山学院管弦楽団',
+        separator: '|',
+        complement: 'THANKS'
+      };
+    }
   }
 };
 </script>

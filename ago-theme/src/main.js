@@ -5,6 +5,7 @@ import store from './store';
 import vuetify from './plugins/vuetify';
 import axios from './plugins/axios';
 import './plugins/vuelidate';
+import './plugins/vuehead';
 
 require('@/assets/styles/base.scss');
 
