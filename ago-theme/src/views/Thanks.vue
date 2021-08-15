@@ -50,7 +50,12 @@ export default {
 }
 
 .btn_container {
-  width: 26%;
+  @include pc-screen() {
+    width: 26%;
+  }
+  @include sp-screen() {
+    width: 46%;
+  }
   margin: 0 auto;
 }
 </style>
