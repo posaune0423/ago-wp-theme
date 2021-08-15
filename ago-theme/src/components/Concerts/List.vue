@@ -1,8 +1,17 @@
 <template>
   <div>
     <div class="concertList__container">
+      <v-skeleton-loader
+        v-for="i in 6"
+        v-show="loading"
+        :key="i"
+        class="mx-auto"
+        width="344"
+        type="card"
+      ></v-skeleton-loader>
       <concert-card
         v-for="concert in concerts"
+        v-show="!loading"
         :key="concert.id"
         :concert="concert"
       />
@@ -36,12 +45,14 @@ export default {
     }
   },
   methods: {
-    getConcerts(page = 1) {
-      this.$axios.get(`wp/v2/concerts?per_page=3&page=${page}`).then((res) => {
-        this.current = page;
-        this.concerts = res.data;
-        this.makePagination(res);
-      });
+    getConcerts(page = 1, limit = 6) {
+      this.$axios
+        .get(`wp/v2/concerts?per_page=${limit}&page=${page}`)
+        .then((res) => {
+          this.current = page;
+          this.concerts = res.data;
+          this.makePagination(res);
+        });
     },
     makePagination(data) {
       this.total = data.headers['x-wp-totalpages'];
