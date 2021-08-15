@@ -5,27 +5,65 @@
       title="CONCERT"
       subtitle="演奏会情報"
     />
+    <div class="concertCard__container">
+      <concert-card
+        v-for="concert in concerts"
+        :key="concert.id"
+        :concert="concert"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
+import ConcertCard from '@/components/Concerts/Card';
 
 export default {
   name: 'TopConcertList',
   components: {
-    SectionTitle
+    SectionTitle,
+    ConcertCard
+  },
+  data() {
+    return {
+      concerts: []
+    };
+  },
+  methods: {
+    getConcerts() {
+      this.$axios
+        .get('wp/v2/concerts', { params: { per_page: 3 } })
+        .then((res) => {
+          this.concerts = res.data;
+        });
+    }
+  },
+  created() {
+    this.getConcerts();
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.concertList__container {
+  padding-bottom: 2rem;
+  background-color: $c_gray-light;
+}
 .concertList__header {
   @include pc-screen() {
     padding: 2rem 6rem;
   }
   @include sp-screen() {
     padding: 2rem 1rem;
+  }
+}
+.concertCard__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  @include pc-screen() {
+    padding: 2rem 6rem;
   }
 }
 </style>
