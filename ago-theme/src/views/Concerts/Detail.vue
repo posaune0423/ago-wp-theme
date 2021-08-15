@@ -2,18 +2,39 @@
   <div>
     <lower-header title="CONCERTS" subtitle="演奏会情報" />
     <div class="concertDetail__container">
+      <v-skeleton-loader
+        v-if="!concert.title"
+        class="mx-auto my-2"
+        width="600"
+        height="1rem"
+        type="heading"
+      ></v-skeleton-loader>
       <bread-list
         v-if="concert.title"
         :title="concert.title.rendered"
         parent="Concerts"
       />
       <div class="concertDetail__wrap">
-        <h1 v-if="concert.title" class="my-2 concertTitle">
+        <v-skeleton-loader
+          v-if="!concert.title"
+          class="mx-auto my-2"
+          width="600"
+          height="1.5rem"
+          type="heading"
+        ></v-skeleton-loader>
+        <h1 v-else class="my-2 concertTitle">
           {{ concert.title.rendered }}
         </h1>
         <div class="my-2 gray--text concertDate">{{ concert.date }}</div>
-        <div v-if="concert.featured_image" class="d-flex justify-center">
-          <v-img :src="concert.featured_image.src" max-width="400" />
+        <v-skeleton-loader
+          v-if="!concert.featured_image"
+          class="mx-auto"
+          width="360"
+          height="460"
+          type="image"
+        ></v-skeleton-loader>
+        <div v-else class="concertDetail__image">
+          <v-img :src="concert.featured_image.src" />
         </div>
         <post-content
           v-if="concert.content"
@@ -90,5 +111,18 @@ export default {
     padding: 1rem;
   }
   text-align: right;
+}
+
+.concertDetail__image {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  @include sp-screen() {
+    width: 94%;
+    max-width: 94%;
+  }
+  @include pc-screen() {
+    width: 70%;
+  }
 }
 </style>
