@@ -8,6 +8,8 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#42b983">
@@ -15,11 +17,19 @@
         <meta name="description" content="<?php bloginfo('description'); ?>">
     <?php endif; ?>
     <?php wp_head(); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
     <div id="app"></div>
     <?php get_footer(); ?>
+
+
+    <!-- CDN Vue related library so that reduce bundle file -->
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script defer src="/wp-content/themes/ago-theme/dist/js/index.js"></script>
 </body>
 
 </html>
