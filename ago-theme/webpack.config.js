@@ -17,7 +17,7 @@ module.exports = {
   // Where to output bundle file
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'js/index.js'
+    filename: 'js/bundle.js'
   },
   externals: {
     vue: 'Vue',
@@ -42,13 +42,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.scss$/,
+        test: /\.(sc|c|sa)ss$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
           {
@@ -59,10 +55,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.sass$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.vue$/,
