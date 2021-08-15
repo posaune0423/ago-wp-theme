@@ -53,7 +53,7 @@
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
           alt="メサイア公演の様子"
         />
-        <figcaption class="text--white">(メサイア公演の様子)</figcaption>
+        <figcaption class="white--text">(メサイア公演の様子)</figcaption>
       </figure>
     </div>
 
@@ -77,7 +77,7 @@
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
           alt="青山祭の様子"
         />
-        <figcaption class="text--white">(青山祭の様子)</figcaption>
+        <figcaption class="white--text">(青山祭の様子)</figcaption>
       </figure>
     </div>
 
