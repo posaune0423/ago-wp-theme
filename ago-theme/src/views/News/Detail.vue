@@ -2,7 +2,7 @@
   <div>
     <lower-header title="NEWS" subtitle="お知らせ" />
     <bread-list :title="post.title.rendered" />
-    <h1 class="my-2">{{ post.title.rendered }}</h1>
+    <h1 class="my-2 newsTitle">{{ post.title.rendered }}</h1>
     <div class="my-2 gray--text">{{ post.date }}</div>
     <div class="d-flex justify-center">
       <v-img :src="post.featured_image.src" max-width="400" />
@@ -47,4 +47,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.newsTitle {
+  font-size: 1.5rem;
+}
+</style>
