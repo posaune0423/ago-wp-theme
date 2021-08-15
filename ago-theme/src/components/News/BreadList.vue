@@ -15,7 +15,7 @@
       </li>
       <li v-if="title">
         <router-link :to="`/news/${this.$route.params.id}`">
-          {{ title }}
+          {{ title | truncate(10) }}
         </router-link>
       </li>
     </ul>
@@ -25,7 +25,18 @@
 <script>
 export default {
   name: 'BreadList',
-  props: ['title']
+  props: ['title'],
+  filters: {
+    truncate: function(val, len) {
+      if (val) {
+        const length = len ? parseInt(len, 10) : 20;
+        if (val.length <= length) {
+          return val;
+        }
+        return val.substring(0, length) + '...';
+      }
+    }
+  }
 };
 </script>
 
