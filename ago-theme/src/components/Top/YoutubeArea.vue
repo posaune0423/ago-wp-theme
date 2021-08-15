@@ -27,9 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.movie_container {
-  margin-bottom: 40px;
-}
 .youtubeArea__header {
   @include pc-screen() {
     padding: 2rem 6rem;
@@ -53,9 +50,7 @@ export default {
 }
 @include pc-screen() {
   .movie_container {
-    padding: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding-bottom: 2rem;
   }
   .movie_frame {
     width: 80%;
@@ -64,7 +59,7 @@ export default {
 }
 @include sp-screen() {
   .movie_container {
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
   }
   .movie_frame {
     width: 100%;
