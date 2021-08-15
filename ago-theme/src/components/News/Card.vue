@@ -9,7 +9,12 @@
     <v-card-subtitle>{{ post.excerpt }} </v-card-subtitle>
 
     <v-card-text>
-      <v-chip v-for="(name, i) in post.category_name" :key="i" small>
+      <v-chip
+        v-for="(name, i) in post.category_name"
+        :key="i"
+        class="mr-1"
+        small
+      >
         {{ name }}
       </v-chip>
     </v-card-text>
