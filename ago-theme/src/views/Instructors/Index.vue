@@ -33,28 +33,20 @@ export default {
             'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/tabuchi.png',
           part: 'Violine',
           description:
-            '1969年、東京藝術大学音楽学部卒業と同時にNHK交響楽団入団。38年間在職し、その間ライブラリアンも務める。\
-            2007年1月定年退職。現在洗足学園音学大学名誉教授。',
+            '芸大付属高校を経て芸大音楽学部を卒業。同時にＮＨＫ交響楽団に入団し、３８年間Ｎ響のステージを務めるとともに、Ｎ響室内合奏団などでも活動してきた。またライブラリアンも２０数年にわたり兼務し、主として弦楽器の楽譜の整備に尽力してきた。　\
+            ２００６年より２０１７年まで洗足学園音楽大学で後進の指導にも当たってきた。青山学院管弦楽団、早稲田大学交響楽団の指導にも永年にわたり携わっている。現在洗足学園音楽大学名誉教授、日本弦楽指導者協会会員',
           position: 'top',
           visible: false
         },
         {
           name: '井野邊 大輔（いのべ だいすけ）',
           belonging: 'NHK交響楽団',
-          image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/inobe.png',
+          image: '/wp-content/themes/ago-theme/static/instructors/inobe.jpg',
           part: 'Viola',
           description:
-            '1991年～2013年 \
-            NHK交響楽団在籍。首席代行奏者を務めた後、離職。第68回日本音楽コンクール作曲部門 \
-            委員会特別賞受賞。 \
-            霧島国際音楽祭等数々の音楽祭やベルリンフィルハーモニー管弦楽団演奏会、 \
-            ロンドンフィル及びBBC響メンバーによるツアーなどに参加。\
-            東京都響、兵庫PAC管、九州響の客演首席奏者やソリストとしても活躍。\
-            現在、仙台フィルハーモニー管弦楽団\
-            ソロ首席、大阪フィルハーモニー交響楽団 \
-            特別契約首席奏者を兼任する。洗足学園大学及び大学院講師。',
-          visible: false
+            '1991～2013年　NHK交響楽団在籍。第68回日本音楽コンクール作曲部門　委員会特別賞受賞。霧島国際音楽祭等数々の音楽祭やベルリンフィルハーモニー管弦楽団演奏会、ロンドンフィル及びBBC響メンバーによるツアーなどに参加。東京都響、兵庫PAC管、九州響の客演首席奏者やソリストとしても活躍。現在、仙台フィルハーモニー管弦楽団　ソロ主席、大阪フィルハーモニー交響楽団 特別契約首席奏者を兼任する。洗足学園大学及び大学院講師。桐朋オーケストラ・アカデミー講師。',
+          visible: false,
+          position: 'top'
         },
         {
           name: '丹羽 経彦(ニワ ツネヒコ)',
@@ -76,22 +68,16 @@ export default {
             'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/nishiyama.png',
           part: 'Contrabass',
           description:
-            '東京藝術大学附属音楽高等学校を経て、東京藝術大学器楽科を2001年卒業。 \
-            学内にて安宅賞、アカンサス音楽賞受賞。第9回宝塚ベガ音楽コンクール弦楽器部門第3位。\
-            これまでに、永島義男、西田直文、石川滋の各氏に師事。 \
-            現在、NHK交響楽団首席代行奏者。東京藝術大学非常勤講師。',
+            '東京藝術大学附属音楽高等学校を経て、東京藝術大学器楽科を2001年卒業。学内にて安宅賞、アカンサス音楽賞受賞。第9回宝塚ベガ音楽コンクール弦楽器部門第3位。これまでに、永島義男、西田直文、石川滋、マシュー・マクドナルドの各氏に師事。現在、NHK交響楽団首席代行奏者。日本大学芸術学部非常勤講師。',
           visible: false
         },
         {
           name: '細川 順三 (ホソカワ ジュンゾウ)',
           belonging: 'NHK交響楽団団友',
-          image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/hosokawa.png',
+          image: '/wp-content/themes/ago-theme/static/instructors/hosokawa.png',
           part: 'Flute',
           description:
-            '東京藝術大学卒業。スイス・バーゼル市立音楽院留学。第40回日本音楽コンクール第2位入賞。\
-          ジュネーブ国際音楽コンクール入賞。札幌交響楽団に13年間(首席奏者)、NHK交響楽団に22年間在籍し2009年退団。\
-          ソロ室内楽の分野においても活動。現在フェリス女学院大学、東京音楽大学非常勤講師。',
+            '東京藝術大学卒業。スイス・バーゼル市立音楽院留学。 第40回日本音楽コンクール第2位入賞。ジュネーブ国際音楽コンクール入賞。 札幌交響楽団に13年間、NHK 交響楽団に22年間在籍。 ソロ、室内楽の活動の他、東京藝大、東京音大、フェリス女学院大などで後進の指導 にも当たった。',
           visible: false
         },
         {
@@ -114,10 +100,7 @@ export default {
             'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/katoh.png',
           part: 'Clarinet',
           description:
-            '国立音楽大学卒業、矢田部賞受賞。第16回民音室内楽コンクール第1位。\
-          第1回及び第2回日本クラリネットコンクール入賞。\
-          第35回ミュンヘン国際コンクール木管五重奏ファイナリスト。\
-          1990年NHK交響楽団入団。東京クラリネットアンサンブル団員。洗足学園、武蔵野音楽大学、国立音楽大学講師。',
+            '国立音楽大学卒業、矢田部賞受賞。第16回民音室内楽コンクール第1位。 第1回及び第2回日本クラリネットコンクール入賞。 第35回ミュンヘン国際コンクール木管五重奏ファイナリスト。 1990年NHK交響楽団入団。東京クラリネットアンサンブル団員。2019年NHK交響楽団を退団し、昭和音楽大学教授及び、武蔵音楽大学非常勤講師。',
           visible: false
         },
         {
@@ -164,11 +147,7 @@ export default {
             'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/okumura.png',
           part: 'Trombone',
           description:
-            '1991年、東京芸術大学に入学。伊藤清氏に師事。第８回日本管打楽器コンクールに入選。\
-            1995年、東京藝術大学卒業。翌年、(財)新日本フィルハーモニー交響楽団入団。\
-            1997年、第14回\
-            日本管打楽器コンクール第1位及び文部大臣賞、東京都知事賞を受賞。\
-            エマーノンブラスクインテット、東京トロンボーンゾリステンメンバー。尚美ミュージックカレッジ専門学校講師。',
+            '1991年、東京芸術大学に入学。伊藤清氏に師事。第８回日本管打楽器コンクールに入選。 1995年、東京藝術大学卒業。翌年、(財)新日本フィルハーモニー交響楽団入団。 1997年、第14回 日本管打楽器コンクール第1位及び文部大臣賞、東京都知事賞を受賞。 エマーノンブラスクインテット、ローブラスカルテット『bottom’s bells』各メンバー。尚美ミュージックカレッジ専門学校講師。',
           visible: false
         },
         {
