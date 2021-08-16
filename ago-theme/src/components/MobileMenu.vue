@@ -66,5 +66,6 @@ export default {
   pointer-events: auto !important;
   opacity: 1 !important;
   transition: opacity 0.225s;
+  overflow-y: hidden;
 }
 </style>
