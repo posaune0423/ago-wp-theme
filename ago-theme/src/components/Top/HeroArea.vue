@@ -11,8 +11,8 @@
       class="Top__HeroAreea__BgVideo"
     ></video>
     <div class="Top__HeroAreea__BgVideo-wrap">
-      <h1>Welcome to AGO</h1>
-      <p>A place to take in a spectacular horizon, then broaden your own.</p>
+      <h1>Welcome to <span class="-large">AGO</span></h1>
+      <p>A place to make music with best mates</p>
     </div>
   </section>
 </template>
@@ -31,6 +31,10 @@ export default {};
     h1 {
       font-weight: 900;
       padding: 0 27px;
+      font-size: 110px;
+      .-large {
+        font-size: 130px;
+      }
     }
     p {
       font-weight: bold;
@@ -41,8 +45,13 @@ export default {};
 @media (min-width: 1268px) {
   .Top__HeroAreea__BgVideo-wrap {
     h1 {
+      font-weight: 900;
+      padding: 0 27px;
       color: #fff;
-      font-size: 125px;
+      font-size: 110px;
+      .-large {
+        font-size: 130px;
+      }
     }
     p {
       color: #fff;
@@ -78,7 +87,10 @@ export default {};
   .Top__HeroAreea__BgVideo-wrap {
     h1 {
       color: #fff;
-      font-size: 85px;
+      font-size: 80px;
+      .-large {
+        font-size: 90px;
+      }
     }
     p {
       color: #fff;
@@ -90,7 +102,10 @@ export default {};
   .Top__HeroAreea__BgVideo-wrap {
     h1 {
       color: #fff;
-      font-size: 70px;
+      font-size: 65px;
+      .-large {
+        font-size: 75px;
+      }
     }
     p {
       color: #fff;
@@ -102,7 +117,10 @@ export default {};
   .Top__HeroAreea__BgVideo-wrap {
     h1 {
       color: #fff;
-      font-size: 62px;
+      font-size: 60px;
+      .-large {
+        font-size: 70px;
+      }
     }
     p {
       color: #fff;
@@ -114,7 +132,10 @@ export default {};
   .Top__HeroAreea__BgVideo-wrap {
     h1 {
       color: #fff;
-      font-size: 57px;
+      font-size: 55px;
+      .-large {
+        font-size: 65px;
+      }
     }
     p {
       color: #fff;
@@ -134,7 +155,10 @@ export default {};
     h1 {
       padding-top: 10px;
       color: #111;
-      font-size: 40px;
+      font-size: 2rem;
+      .-large {
+        font-size: 2.5rem;
+      }
     }
     p {
       color: #111;
