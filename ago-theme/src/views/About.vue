@@ -85,7 +85,7 @@
     <section class="About__Ensemble">
       <h2 class="SectionTitle">
         <span class="SectionTitle__Body"
-          >Ensemble <span class="-green">Contest</span></span
+          ><span class="-green">Ensemble</span> Contest</span
         >
         <span class="SectionTitle__Subtitle">部内アンサンブル大会</span>
       </h2>
