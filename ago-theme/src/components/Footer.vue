@@ -29,7 +29,7 @@
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UC6_-dbI_cSZbOf95QjBuaLg">
+            <a href="https://www.youtube.com/channel/UC9Zy43jAJlgwQ9nMWD-LWPA">
               <v-icon large>mdi-youtube</v-icon>
             </a>
           </li>
