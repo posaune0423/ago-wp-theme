@@ -22,3 +22,11 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Inside the remote server
+
+run below
+```
+cp -pr .env.sample .env
+```
