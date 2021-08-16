@@ -135,7 +135,7 @@ export default {
     margin-left: 0;
   }
   .Footer__Right {
-    background: #eee;
+    background-color: #eceae6;
     a {
       color: black;
     }

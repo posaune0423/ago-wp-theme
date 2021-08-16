@@ -45,7 +45,7 @@ export default {
     }
   },
   methods: {
-    getConcerts(page = 1, limit = 1) {
+    getConcerts(page = 1, limit = 6) {
       this.$axios
         .get(`wp/v2/concerts?per_page=${limit}&page=${page}`)
         .then((res) => {

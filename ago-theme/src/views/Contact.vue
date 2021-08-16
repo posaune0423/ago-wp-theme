@@ -88,7 +88,8 @@ export default {
     body: { required }
   },
   data: () => ({
-    url: 'contact-form-7/v1/contact-forms/6/feedback',
+    formId: process.env.CONTACT_FORM_ID || 5,
+    url: `contact-form-7/v1/contact-forms/${this.formId}/feedback`,
     name: '',
     email: '',
     subject: '',
