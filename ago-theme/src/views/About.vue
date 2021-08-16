@@ -72,32 +72,6 @@
         オーケストラでは4年生が中心となって取り組んでおり、現役最後の演奏会となります。他団体との交流により、管弦楽のみとはまた違った魅力のある演奏会です。
       </p>
     </section>
-
-    <div class="Section__Image">
-      <figure>
-        <v-img
-          src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
-          lazy-src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
-          alt="青山祭の様子"
-        />
-        <figcaption class="white--text">(青山祭の様子)</figcaption>
-      </figure>
-    </div>
-
-    <section class="About__AoyamaFestival">
-      <h2 class="SectionTitle">
-        <span class="SectionTitle__Body"
-          ><span class="-green">Aoyama</span> Festival</span
-        >
-
-        <span class="SectionTitle__Subtitle">青山祭</span>
-      </h2>
-
-      <p>
-        毎年11月に青山キャンパスで行われる「青山祭」に青山学院管弦楽団も参加しています。毎年音楽喫茶を開催しており、ケーキとドリンクをオーケストラの生演奏を聴きながら共に楽しめるということで、ご好評をいただいております。<br />
-        フル編成のオーケストラではクラシック音楽のみならず、ディズニーやジブリなど誰もが耳にしたことのある曲も演奏しています。また、オーケストラのみならず小編成のアンサンブル発表も行っています。
-      </p>
-    </section>
   </div>
 </template>
 
@@ -148,10 +122,6 @@ export default {
   &__Messiah {
     color: $c_white;
     background-color: $c_black;
-  }
-  &__AoyamaFestival {
-    color: $c_white;
-    background-color: rgba(0, 74, 112, 0.9);
   }
 }
 .SectionTitle {
