@@ -1,10 +1,16 @@
 <template>
   <div class="Pager">
     <div class="Pager__Inner">
-      <v-btn :disabled="!prev" @click="$router.push(`/news/?page=${prev}`)">
+      <v-btn
+        :disabled="!prev"
+        @click="$router.push(`/${parent}/?page=${prev}`)"
+      >
         <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
-      <v-btn :disabled="!next" @click="$router.push(`/news/?page=${next}`)">
+      <v-btn
+        :disabled="!next"
+        @click="$router.push(`/${parent}/?page=${next}`)"
+      >
         <v-icon>mdi-chevron-right</v-icon>
       </v-btn>
     </div>
@@ -14,7 +20,7 @@
 <script>
 export default {
   name: 'Pager',
-  props: ['prev', 'next']
+  props: ['prev', 'next', 'parent']
 };
 </script>
 

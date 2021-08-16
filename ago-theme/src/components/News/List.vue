@@ -16,7 +16,7 @@
         :post="post"
       />
     </div>
-    <pager :next="next" :prev="prev" />
+    <pager :next="next" :prev="prev" parent="news" />
   </div>
 </template>
 

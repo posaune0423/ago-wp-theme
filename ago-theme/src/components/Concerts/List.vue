@@ -16,7 +16,7 @@
         :concert="concert"
       />
     </div>
-    <pager :next="next" :prev="prev" />
+    <pager :next="next" :prev="prev" parent="concerts" />
   </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
     }
   },
   methods: {
-    getConcerts(page = 1, limit = 6) {
+    getConcerts(page = 1, limit = 1) {
       this.$axios
         .get(`wp/v2/concerts?per_page=${limit}&page=${page}`)
         .then((res) => {
