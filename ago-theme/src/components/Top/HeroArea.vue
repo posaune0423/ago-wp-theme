@@ -11,7 +11,7 @@
       class="Top__HeroAreea__BgVideo"
     ></video>
     <div class="Top__HeroAreea__BgVideo-wrap">
-      <h1>Welcome to our House</h1>
+      <h1>Welcome to AGO</h1>
       <p>A place to take in a spectacular horizon, then broaden your own.</p>
     </div>
   </section>
