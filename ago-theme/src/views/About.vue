@@ -23,8 +23,8 @@
     <div class="Section__Image">
       <figure>
         <v-img
-          src="@/assets/images/regular-concert.jpg"
-          lazy-src="@/assets/images/regular-concert.jpg"
+          src="/wp-content/themes/ago-theme/static/regular_concert.jpg"
+          lazy-src="/wp-content/themes/ago-theme/static/regular_concert.jpg"
           alt="定期演奏会の様子"
         />
         <figcaption>(定期演奏会の様子)</figcaption>
@@ -66,6 +66,34 @@
         オール青山メサイア公演は、毎年12月に青山学院のクリスマスの行事として1976年から行われています。普段は別々に活動している学内7つの音楽団体（合唱６、管弦楽１）が一堂に集まり、G.F.ヘンデル作曲のオラトリオ「メサイア」を演奏します。
         <br />
         オーケストラでは4年生が中心となって取り組んでおり、現役最後の演奏会となります。他団体との交流により、管弦楽のみとはまた違った魅力のある演奏会です。
+      </p>
+    </section>
+
+    <div class="Section__Image">
+      <figure>
+        <v-img
+          src="/wp-content/themes/ago-theme/static/ensemble.jpg"
+          lazy-src="/wp-content/themes/ago-theme/static/ensemble.jpg"
+          alt="部内アンサンブル大会の様子"
+        />
+        <figcaption class="white--text">
+          (部内アンサンブル大会の様子)
+        </figcaption>
+      </figure>
+    </div>
+
+    <section class="About__Ensemble">
+      <h2 class="SectionTitle">
+        <span class="SectionTitle__Body"
+          >Ensemble <span class="-green">Contest</span></span
+        >
+        <span class="SectionTitle__Subtitle">部内アンサンブル大会</span>
+      </h2>
+      <p>
+        毎年6〜7月に部内アンサンブル大会を開催しています。アンサンブル大会は、新入生が実際に演奏に参加することによって当団の雰囲気や魅力を実感してもらおうということを目標に開催されています。少人数のアンサンブルからフル編成のオーケストラまで多くの団体が、様々なジャンルの曲を約1ヶ月間の練習を経て発表をします。
+      </p>
+      <p>
+        パートやセクション、学年の垣根を超えて多くの団員がお互いの演奏を楽しみ、吹奏楽やコーラス付きのミュージカル曲、コンチェルトなど普段演奏することのない楽曲にも取り組むことができる機会となっています。
       </p>
     </section>
   </div>
@@ -118,6 +146,10 @@ export default {
   &__Messiah {
     color: $c_white;
     background-color: $c_black;
+  }
+  &__Ensemble {
+    color: $c_white;
+    background-color: rgba(0, 74, 112, 0.9);
   }
 }
 .SectionTitle {
@@ -193,6 +225,7 @@ export default {
     font-size: 0.7rem;
     text-align: right;
     margin-right: 2rem;
+    margin-top: 8px;
   }
 }
 </style>

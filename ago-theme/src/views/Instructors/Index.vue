@@ -58,7 +58,8 @@ export default {
             1965年桐朋音楽学園大学音楽部入学。\
             1970年読売交響楽団、1976年NHK交響楽団入団。\
             2003年同楽団定年退職。伊達三郎、斉藤秀雄両氏に師事。',
-          visible: false
+          visible: false,
+          position: 'top'
         },
         {
           name: '西山 真二 (ニシヤマ シンジ)',
