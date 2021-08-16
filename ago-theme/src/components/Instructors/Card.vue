@@ -1,5 +1,8 @@
 <template>
-  <v-card class="mx-auto trainer_card">
+  <v-card
+    class="mx-auto trainer_card"
+    :height="person.visible ? 'auto' : '448'"
+  >
     <v-img
       :src="person.image"
       height="280px"
