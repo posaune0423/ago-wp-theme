@@ -89,7 +89,7 @@ export default {
   },
   data: () => ({
     formId: process.env.CONTACT_FORM_ID || 5,
-    url: `contact-form-7/v1/contact-forms/${this.formId}/feedback`,
+    url: 'contact-form-7/v1/contact-forms/5/feedback',
     name: '',
     email: '',
     subject: '',
