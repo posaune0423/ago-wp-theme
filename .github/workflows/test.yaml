@@ -1,20 +1,20 @@
-name: test & lint
+name: lint
 # If at least one path matches a pattern in the paths filter, the workflow runs.
 on:
   push:
     branches:
       - main
     paths:
-      - "sample-theme/**"
+      - "ago-theme/**"
   pull_request:
     branches:
       - main
     paths:
-      - "sample-theme/**"
+      - "ago-theme/**"
 # Specify the working directory for all run steps in a workflow
 defaults:
   run:
-    working-directory: sample-theme
+    working-directory: ago-theme
 
 jobs:
   ci-test:
