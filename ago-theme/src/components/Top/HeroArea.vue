@@ -1,11 +1,14 @@
 <template>
   <section class="Top__HeroArea">
     <video
-      class="Top__HeroAreea__BgVideo"
       src="@/assets/images/hero_movie.mp4"
+      poster="@/assets/images/hero_movie_poster.jpg"
+      playsinline
       muted="muted"
       loop
       autoplay="true"
+      loading="lazy"
+      class="Top__HeroAreea__BgVideo"
     ></video>
     <div class="Top__HeroAreea__BgVideo-wrap">
       <h1>Welcome to our House</h1>

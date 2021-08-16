@@ -36,7 +36,11 @@
           type="image"
         ></v-skeleton-loader>
         <div v-else class="ConcertsDetail__Image">
-          <v-img :src="concert.featured_image.src" alt="演奏会画像" />
+          <v-img
+            :src="concert.featured_image.src"
+            :lazy-src="concert.featured_image.src"
+            alt="演奏会画像"
+          />
         </div>
         <post-content
           v-if="concert.content"

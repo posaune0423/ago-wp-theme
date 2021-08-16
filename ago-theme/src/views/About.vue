@@ -26,8 +26,9 @@
 
     <div class="Section__Image">
       <figure>
-        <img
+        <v-img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/0042_Cb15.jpg"
+          lazy-src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/0042_Cb15.jpg"
           alt="定期演奏会の様子"
         />
         <figcaption>(定期演奏会の様子)</figcaption>
@@ -49,8 +50,9 @@
 
     <div class="Section__Image">
       <figure>
-        <img
+        <v-img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
+          lazy-src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
           alt="メサイア公演の様子"
         />
         <figcaption class="white--text">(メサイア公演の様子)</figcaption>
@@ -73,8 +75,9 @@
 
     <div class="Section__Image">
       <figure>
-        <img
+        <v-img
           src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
+          lazy-src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/aoyama_fes.jpg"
           alt="青山祭の様子"
         />
         <figcaption class="white--text">(青山祭の様子)</figcaption>
@@ -204,17 +207,17 @@ export default {
 .Section__Image {
   @include pc-screen() {
     height: 500px;
-    img {
+    figure > div {
       height: 500px;
     }
   }
   @include sp-screen() {
     height: 260px;
-    img {
+    figure > div {
       height: 260px;
     }
   }
-  img {
+  figure > div {
     width: 100%;
     object-fit: cover;
   }

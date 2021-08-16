@@ -5,6 +5,7 @@
   >
     <v-img
       :src="person.image"
+      :lazy-src="person.image"
       height="280px"
       alt="トレーナー画像"
       :position="person.position || 'center'"

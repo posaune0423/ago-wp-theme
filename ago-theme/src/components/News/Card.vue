@@ -2,6 +2,7 @@
   <v-card class="mx-auto" width="344" :to="'/news/' + post.id" hover>
     <v-img
       :src="post.featured_image.src"
+      :lazy-src="post.featured_image.src"
       alt="お知らせ画像"
       height="200px"
     ></v-img>

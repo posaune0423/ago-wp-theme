@@ -10,6 +10,10 @@ import './plugins/vuehead';
 require('@/assets/styles/base.scss');
 
 Vue.config.productionTip = false;
+
+if (process.env.NODE_ENV === 'production') {
+  Vue.config.devtools = false;
+}
 Vue.prototype.$axios = axios;
 
 new Vue({

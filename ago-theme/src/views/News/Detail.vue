@@ -39,7 +39,11 @@
           type="image"
         ></v-skeleton-loader>
         <div v-else class="NewsDetail__Image">
-          <v-img :src="post.featured_image.src" alt="おしらせ画像" />
+          <v-img
+            :src="post.featured_image.src"
+            :lazy-src="post.featured_image.src"
+            alt="おしらせ画像"
+          />
         </div>
         <post-content
           v-if="post.content"
