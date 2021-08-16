@@ -51,8 +51,7 @@ export default {
         {
           name: '丹羽 経彦(ニワ ツネヒコ)',
           belonging: 'NHK交響楽団団友',
-          image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/niwa.png',
+          image: '/wp-content/themes/ago-theme/static/instructors/niwa.jpg',
           part: 'Violoncello',
           description:
             '1958年大阪音楽大学附属高等学校入学。1962年大阪音楽大学入学。\
@@ -69,7 +68,8 @@ export default {
           part: 'Contrabass',
           description:
             '東京藝術大学附属音楽高等学校を経て、東京藝術大学器楽科を2001年卒業。学内にて安宅賞、アカンサス音楽賞受賞。第9回宝塚ベガ音楽コンクール弦楽器部門第3位。これまでに、永島義男、西田直文、石川滋、マシュー・マクドナルドの各氏に師事。現在、NHK交響楽団首席代行奏者。日本大学芸術学部非常勤講師。',
-          visible: false
+          visible: false,
+          position: 'top'
         },
         {
           name: '細川 順三 (ホソカワ ジュンゾウ)',
@@ -83,8 +83,7 @@ export default {
         {
           name: '北島 章 (キタジマ アキラ)',
           belonging: 'NHK交響楽団団友',
-          image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/kitajima.png',
+          image: '/wp-content/themes/ago-theme/static/instructors/kitajima.jpg',
           part: 'Oboe',
           description:
             '1973年武蔵野音楽大学器楽科卒業。同年、旧西ドイツ、北西ドイツ音楽アカデミーに入学し、ヘルムート・ヴィンシャーマン氏に学ぶ。 \
