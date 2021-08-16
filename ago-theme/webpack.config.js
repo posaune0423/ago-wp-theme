@@ -1,6 +1,6 @@
 const path = require('path');
 const { argv } = require('process');
-const MODE = argv.mode;
+const MODE = argv[3];
 
 /////////////////////// Plugins ///////////////////////
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
@@ -129,18 +129,15 @@ module.exports = {
         ],
   // Minimize files if mode is production
   optimization: {
-    minimizer:
-      'production' === MODE
-        ? []
-        : [
-            // Optimize js file
-            new TerserPlugin({
-              extractComments: 'all', // remove all comment
-              terserOptions: {
-                compress: { drop_console: true } // remove output of console.log
-              }
-            })
-          ]
+    minimizer: [
+      // Optimize js file
+      new TerserPlugin({
+        extractComments: 'all', // remove all comment
+        terserOptions: {
+          compress: { drop_console: true } // remove output of console.log
+        }
+      })
+    ]
   },
   // Reload browser when html, css, js files is updated
   devServer: {

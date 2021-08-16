@@ -1,6 +1,6 @@
 {
-  "name": "sample-theme",
-  "version": "0.1.0",
+  "name": "ago-theme",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "build": "webpack --mode production",

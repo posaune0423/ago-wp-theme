@@ -95,11 +95,14 @@ export default {
     }
   }
   &__Title {
-    color: $c_black;
+    @include pc-screen() {
+      font-size: 2rem;
+    }
     @include sp-screen() {
       font-size: 1.5rem;
-      padding: 1rem;
     }
+    padding: 1rem;
+    color: $c_black;
   }
   &__Date {
     @include sp-screen() {
