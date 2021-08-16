@@ -1,7 +1,7 @@
 {
   "name": "ago-theme",
   "version": "1.0",
-  "license": "MIT",
+  "license": "GNU",
   "private": true,
   "scripts": {
     "build": "webpack --mode production",
