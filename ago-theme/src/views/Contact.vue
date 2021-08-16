@@ -133,7 +133,7 @@ export default {
           your_name: this.name,
           your_email: this.email,
           your_subject: this.subject,
-          your_body: this.body
+          your_message: this.body
         });
         this.$axios
           .post(this.url, formData)
