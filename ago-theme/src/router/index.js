@@ -1,9 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Top from '@/views/Top';
-import About from '@/views/About';
-import Contact from '@/views/Contact';
-import Thanks from '@/views/Thanks';
 
 Vue.use(Router);
 
@@ -13,11 +9,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Top
+      component: () => import('@/views/Top')
     },
     {
       path: '/about/',
-      component: About
+      component: () => import('@/views/About')
     },
     {
       path: '/news/',
@@ -41,11 +37,11 @@ export default new Router({
     },
     {
       path: '/contact/',
-      component: Contact
+      component: () => import('@/views/Contact')
     },
     {
       path: '/thanks/',
-      component: Thanks
+      component: () => import('@/views/Thanks')
     }
   ],
   scrollBehavior() {
