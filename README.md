@@ -1,6 +1,6 @@
 # ago-wp-theme
 
-[![test & lint](https://github.com/posaune0423/vue-wordpress-theme-sample/actions/workflows/test.yaml/badge.svg)](https://github.com/posaune0423/vue-wordpress-theme-sample/actions/workflows/test.yaml)
+[![lint](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml/badge.svg)](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml)
 
 This is sample wordpress Vue.js theme settings working on Docker.
 
