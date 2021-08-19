@@ -2,7 +2,7 @@
 
 [![lint](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml/badge.svg)](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml)
 
-This is sample wordpress Vue.js theme settings working on Docker.
+This is Vue.js theme made for [Aoyama Gakuin Orchestra](https://aoyamaorchestra.com/)
 
 I really respect settings below
 
@@ -21,11 +21,11 @@ Also, in this environment upload_max_filesize in php.ini is configured by upload
 ### 1. Build docker image and start the server
 
 ```bash
-$ git clone https://github.com/posaune0423/wp-local.git
+$ git clone https://github.com/posaune0423/ago-wp-theme.git
 
-$ cd vue-wordpress-theme-sample
+$ cd ago-wp-theme
 
-$ docker-compose up -d --build
+$ docker compose up -d --build
 ```
 
 then automatically apache web server start on http://localhost:8000
