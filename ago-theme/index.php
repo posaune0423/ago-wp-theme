@@ -21,9 +21,9 @@
 
 
     <!-- CDN Vue related library so that reduce bundle file -->
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" crossorigin></script>
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" crossorigin></script>
-    <script defer async type="text/javascript" src="/wp-content/themes/ago-theme/dist/js/bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" crossorigin></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" crossorigin></script>
+    <script type="text/javascript" src="/wp-content/themes/ago-theme/dist/js/bundle.js"></script>
 </body>
 
 </html>
