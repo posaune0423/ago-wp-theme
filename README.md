@@ -1,6 +1,6 @@
 # ago-wp-theme
 
-[![lint](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml/badge.svg)](https://github.com/posaune0423/ago-wp-theme/actions/workflows/test.yaml)
+[![test & deploy](https://github.com/posaune0423/ago-wp-theme/actions/workflows/deploy.yml/badge.svg)](https://github.com/posaune0423/ago-wp-theme/actions/workflows/deploy.yml)
 
 This is Vue.js theme made for [Aoyama Gakuin Orchestra](https://aoyamaorchestra.com/)
 
