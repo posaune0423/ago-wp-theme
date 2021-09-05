@@ -25,3 +25,13 @@ jobs:
         run: yarn install
       - name: Lint files by eslint
         run: yarn lint
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v1
+        with: # shimataro/ssh-key-actionに渡すパラメーター
+          key: ${{ secrets.SSH_KEY }} # 必須
+          name: id_rsa # 省略可
+      - name: run deploy script
+        run: bash deploy.sh
