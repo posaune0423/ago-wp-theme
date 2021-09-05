@@ -6,7 +6,7 @@
         <span class="SectionTitle__Body"
           >Who we <span class="-green">are</span></span
         >
-        <span class="SectionTitle__Subtitle">青山管弦楽団とは</span>
+        <span class="SectionTitle__Subtitle">青山学院管弦楽団とは</span>
       </h2>
       <p>
         青山学院管弦楽団は青山学院大学文化連合会に所属する学生オーケストラ団体です。当団は1954年に創設され、現在は他大学の学生を含め現役生110名を超える団員で構成されています。練習は通常週３回、青山キャンパスで行なっています。
