@@ -28,4 +28,5 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }} # 必須
           name: id_rsa # 省略可
       - name: run deploy script
+        working-directory: ./
         run: bash deploy.sh
