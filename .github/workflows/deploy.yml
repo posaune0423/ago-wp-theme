@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: move directory
-        run: cd ago-theme
       - name: Install Packages by Yarn
+        working-directory: ./ago-theme
         run: yarn install
       - name: Lint files by eslint
+        working-directory: ./ago-theme
         run: yarn lint
   deploy:
     runs-on: ubuntu-latest
@@ -27,7 +27,5 @@ jobs:
         with: # shimataro/ssh-key-actionに渡すパラメーター
           private-key: ${{ secrets.SSH_KEY }} # 必須
           name: id_rsa # 省略可
-      - name: ls
-        run: ls
       - name: run deploy script
         run: sh deploy.sh
