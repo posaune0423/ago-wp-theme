@@ -1,24 +1,17 @@
-name: lint
+name: test & deploy
 # If at least one path matches a pattern in the paths filter, the workflow runs.
 on:
   push:
     branches:
       - main
-    paths:
-      - "ago-theme/**"
   pull_request:
     branches:
       - main
-    paths:
-      - "ago-theme/**"
-# Specify the working directory for all run steps in a workflow
-defaults:
-  run:
-    working-directory: ago-theme
 
 jobs:
   ci-test:
     runs-on: ubuntu-latest
+    working-directory: ago-theme
     steps:
       - uses: actions/checkout@v2
       - name: Install Packages by Yarn
