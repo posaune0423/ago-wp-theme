@@ -55,7 +55,9 @@ export default {
     margin: 2rem auto;
   }
   &__Body {
-    text-align: center;
+    @include pc-screen() {
+      text-align: center;
+    }
     margin: 2rem auto;
   }
 }
