@@ -28,4 +28,4 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }}
           name: id_rsa
       - name: run deploy script
-        run: ssh -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
+        run: ssh -T ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
