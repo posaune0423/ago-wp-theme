@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 Vue.prototype.$axios = axios;
 
-
 new Vue({
   router,
   store,
