@@ -42,6 +42,10 @@ export default new Router({
     {
       path: '/thanks/',
       component: () => import('@/views/Thanks')
+    },
+    {
+      path: '*',
+      component: () => import('@/views/404')
     }
   ],
   scrollBehavior() {

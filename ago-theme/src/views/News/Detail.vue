@@ -70,9 +70,14 @@ export default {
   },
   methods: {
     async getPost() {
-      this.$axios.get(`wp/v2/posts/${this.$route.params.id}`).then((res) => {
-        this.post = res.data;
-      });
+      this.$axios
+        .get(`wp/v2/posts/${this.$route.params.id}`)
+        .then((res) => {
+          this.post = res.data;
+        })
+        .catch(() => {
+          this.$router.push('/404');
+        });
     }
   },
   mounted() {

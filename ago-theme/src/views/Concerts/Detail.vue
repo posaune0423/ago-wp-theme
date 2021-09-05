@@ -66,9 +66,14 @@ export default {
   },
   methods: {
     getConcert() {
-      this.$axios.get(`wp/v2/concerts/${this.$route.params.id}`).then((res) => {
-        this.concert = res.data;
-      });
+      this.$axios
+        .get(`wp/v2/concerts/${this.$route.params.id}`)
+        .then((res) => {
+          this.concert = res.data;
+        })
+        .catch(() => {
+          this.$router.push('/404');
+        });
     }
   },
   created() {
