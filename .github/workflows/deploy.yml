@@ -24,8 +24,8 @@ jobs:
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v1
-        with: # shimataro/ssh-key-actionに渡すパラメーター
-          private-key: ${{ secrets.SSH_KEY }} # 必須
-          name: id_rsa # 省略可
+        with:
+          private-key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
       - name: run deploy script
-        run: bash ./deploy.sh
+        run: ssh -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
