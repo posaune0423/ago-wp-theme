@@ -179,7 +179,7 @@ export default {
       background-color: #222;
       content: '';
       @include pc-screen() {
-        bottom: 3.6vw;
+        bottom: 3.1vw;
         width: 19rem;
       }
       @include sp-screen() {
