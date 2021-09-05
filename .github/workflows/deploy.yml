@@ -27,5 +27,7 @@ jobs:
         with: # shimataro/ssh-key-actionに渡すパラメーター
           private-key: ${{ secrets.SSH_KEY }} # 必須
           name: id_rsa # 省略可
+      - name: ls
+        run: ls
       - name: run deploy script
-        run: bash deploy.sh
+        run: sh deploy.sh
