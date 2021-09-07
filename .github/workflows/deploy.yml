@@ -18,4 +18,4 @@ jobs:
       - name: run deploy script
         run: |
           chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
+          ssh -vvv -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
