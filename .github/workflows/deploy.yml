@@ -16,4 +16,4 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: run deploy script
-        run: ssh -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
+        run: ssh -T ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
