@@ -15,4 +15,4 @@ jobs:
         run: |
           echo "$SECRET_KEY" > secret_key
           chmod 600 secret_key
-          ssh -oStrictHostKeyChecking=no -i id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
+          ssh -oStrictHostKeyChecking=no -i secret_key xs098000@xs098000.xsrv.jp -p 10022 "ls"
