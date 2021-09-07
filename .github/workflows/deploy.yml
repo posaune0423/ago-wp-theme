@@ -16,4 +16,4 @@ jobs:
           name: id_rsa
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: run deploy script
-        run: ssh -o StrictHostKeyChecking -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
