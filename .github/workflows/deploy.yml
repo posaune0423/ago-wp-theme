@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install SSH key
-        env:
-          SECRET_KEY: ${{ secrets.SSH_KEY }}
-        run: |
-          echo "$SECRET_KEY" > secret_key
-          chmod 600 secret_key
-          ssh -oStrictHostKeyChecking=no -i secret_key xs098000@xs098000.xsrv.jp -p 10022 "ls"
+        uses: shimataro/ssh-key-action@v1
+        with:
+          private-key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: run deploy script
+        run: ssh -oStrictHostKeyChecking -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022 "ls"
