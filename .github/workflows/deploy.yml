@@ -15,6 +15,9 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }}
           name: id_rsa
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: |
+            Host *
+              GSSAPIAuthentication no
       - name: run deploy script
         run: |
           chmod 600 ~/.ssh/id_rsa
