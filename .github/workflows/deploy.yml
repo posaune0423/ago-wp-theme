@@ -15,4 +15,4 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }}
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: run deploy script
-        run: ssh -p 10022 xs098000@xs098000.xsrv.jp
+        run: ssh -T xs098000@xs098000.xsrv.jp -p 10022
