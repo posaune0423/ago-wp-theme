@@ -1,32 +1,19 @@
-name: test & deploy
+name: deploy
 # If at least one path matches a pattern in the paths filter, the workflow runs.
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  ci-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Packages by Yarn
-        working-directory: ./ago-theme
-        run: yarn install
-      - name: Lint files by eslint
-        working-directory: ./ago-theme
-        run: yarn lint
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Install SSH key
-        uses: shimataro/ssh-key-action@v1
+        uses: shimataro/ssh-key-action@v2
         with:
           private-key: ${{ secrets.SSH_KEY }}
           name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: run deploy script
-        run: ssh -T ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
+        run: ssh -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
