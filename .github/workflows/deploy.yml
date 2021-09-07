@@ -15,5 +15,10 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }}
           name: id_rsa
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: |
+            Host xserver
+              HostName xs098000.xsrv.jp
+              User xs098000
+              IdentityFile ~/.ssh/id_rsa
       - name: run deploy script
         run: ssh -T ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
