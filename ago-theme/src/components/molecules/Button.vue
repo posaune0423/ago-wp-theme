@@ -1,14 +1,14 @@
 <template functional>
   <div class="Btn__Container">
     <v-btn color="success" block x-large :to="props.path">{{
-      props.text || 'VIEW MORE'
+      props.text
     }}</v-btn>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ViewMoreButton',
+  name: 'Button',
   props: ['path', 'text']
 };
 </script>
