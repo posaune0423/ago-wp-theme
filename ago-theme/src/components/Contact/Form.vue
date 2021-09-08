@@ -82,7 +82,6 @@ export default {
   },
   data: () => ({
     formId: process.env.CONTACT_FORM_ID || 5,
-    url: 'contact-form-7/v1/contact-forms/2/feedback',
     name: '',
     email: '',
     subject: '',
@@ -93,6 +92,9 @@ export default {
     }
   }),
   computed: {
+    url() {
+      return 'contact-form-7/v1/contact-forms/' + this.formId + '/feedback';
+    },
     nameErrors() {
       const errors = [];
       if (!this.$v.name.$dirty) return errors;
