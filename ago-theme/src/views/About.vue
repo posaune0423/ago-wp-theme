@@ -20,7 +20,7 @@
       </p>
     </section>
 
-    <div class="Section__Image">
+    <div class="ImageContainer">
       <figure>
         <v-img
           src="/wp-content/themes/ago-theme/static/about/regular_concert.jpg"
@@ -44,7 +44,7 @@
       </p>
     </section>
 
-    <div class="Section__Image">
+    <div class="ImageContainer">
       <figure>
         <v-img
           src="/wp-content/themes/ago-theme/static/about/messiah.jpg"
@@ -69,7 +69,7 @@
       </p>
     </section>
 
-    <div class="Section__Image">
+    <div class="ImageContainer">
       <figure>
         <v-img
           src="/wp-content/themes/ago-theme/static/about/ensemble.jpg"
@@ -202,7 +202,7 @@ export default {
   }
 }
 
-.Section__Image {
+.ImageContainer {
   @include pc-screen() {
     height: 500px;
     figure > div {
