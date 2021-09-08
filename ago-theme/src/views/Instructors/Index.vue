@@ -30,7 +30,7 @@ export default {
           name: '田渕 彰 (タブチ アキラ)',
           belonging: 'NHK交響楽団団友',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/tabuchi.png',
+            '/wp-content/themes/ago-theme/static/instructors/tabuchi.png',
           part: 'Violine',
           description:
             '芸大付属高校を経て芸大音楽学部を卒業。同時にＮＨＫ交響楽団に入団し、３８年間Ｎ響のステージを務めるとともに、Ｎ響室内合奏団などでも活動してきた。またライブラリアンも２０数年にわたり兼務し、主として弦楽器の楽譜の整備に尽力してきた。　\
@@ -65,7 +65,7 @@ export default {
           name: '西山 真二 (ニシヤマ シンジ)',
           belonging: 'NHK交響楽団',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/nishiyama.png',
+            '/wp-content/themes/ago-theme/static/instructors/nishiyama.png',
           part: 'Contrabass',
           description:
             '東京藝術大学附属音楽高等学校を経て、東京藝術大学器楽科を2001年卒業。学内にて安宅賞、アカンサス音楽賞受賞。第9回宝塚ベガ音楽コンクール弦楽器部門第3位。これまでに、永島義男、西田直文、石川滋、マシュー・マクドナルドの各氏に師事。現在、NHK交響楽団首席代行奏者。日本大学芸術学部非常勤講師。',
@@ -97,7 +97,7 @@ export default {
           name: '加藤 明久 (カトウ アキヒサ)',
           belonging: 'NHK交響楽団',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/katoh.png',
+            '/wp-content/themes/ago-theme/static/instructors/katoh.png',
           part: 'Clarinet',
           description:
             '国立音楽大学卒業、矢田部賞受賞。第16回民音室内楽コンクール第1位。 第1回及び第2回日本クラリネットコンクール入賞。 第35回ミュンヘン国際コンクール木管五重奏ファイナリスト。 1990年NHK交響楽団入団。東京クラリネットアンサンブル団員。2019年NHK交響楽団を退団し、昭和音楽大学教授及び、武蔵音楽大学非常勤講師。',
@@ -107,7 +107,7 @@ export default {
           name: '霧生 吉秀(キリュウ ヨシヒデ)',
           belonging: 'NHK交響楽団団友',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/kiryu.png',
+            '/wp-content/themes/ago-theme/static/instructors/kiryu.png',
           part: 'Fagotto',
           description:
             '1940年生まれ。東京藝術大学、同大学院を卒業。1965年、第34回NHK毎日音楽コンクール(日本音楽コンクール)管楽器部門第1位入賞。\
@@ -118,7 +118,7 @@ export default {
         {
           name: '阿部 麿(アベ マロ)',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/abe2.png',
+            '/wp-content/themes/ago-theme/static/instructors/abe2.png',
           part: 'Horn',
           description:
             '1996年、国立音楽大学器楽科卒業。97年、第14回日本管打楽器コンクール第2位入賞。\
@@ -131,7 +131,7 @@ export default {
           name: '北村 源三 (キタムラ ゲンゾウ)',
           belonging: 'NHK交響楽団団友',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/kitamura.png',
+            '/wp-content/themes/ago-theme/static/instructors/kitamura.png',
           part: 'Trumpet',
           description:
             '1937年生まれ。東京藝術大学卒業と同時にNHK交響楽団に入団。\
@@ -144,7 +144,7 @@ export default {
           name: '奥村 晃 (オクムラ コウ)',
           belonging: '新日本フィルハーモニー交響楽団',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/okumura.png',
+            '/wp-content/themes/ago-theme/static/instructors/okumura.png',
           part: 'Trombone',
           description:
             '1991年、東京芸術大学に入学。伊藤清氏に師事。第８回日本管打楽器コンクールに入選。 1995年、東京藝術大学卒業。翌年、(財)新日本フィルハーモニー交響楽団入団。 1997年、第14回 日本管打楽器コンクール第1位及び文部大臣賞、東京都知事賞を受賞。 エマーノンブラスクインテット、ローブラスカルテット『bottom’s bells』各メンバー。尚美ミュージックカレッジ専門学校講師。',
@@ -154,7 +154,7 @@ export default {
           name: '百瀬 和紀(モモセ カズノリ)',
           belonging: 'NHK交響楽団団友',
           image:
-            'https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/momose.png',
+            '/wp-content/themes/ago-theme/static/instructors/momose.png',
           part: 'Percussion',
           description:
             '長野県松本市生まれ。1965年東京藝術大学卒業。同年NHK交響楽団入団。\
