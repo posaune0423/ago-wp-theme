@@ -1,24 +1,24 @@
-# name: deploy
-# # If at least one path matches a pattern in the paths filter, the workflow runs.
-# on:
-#   push:
-#     branches:
-#       - main
+name: deploy
+# If at least one path matches a pattern in the paths filter, the workflow runs.
+on:
+  push:
+    branches:
+      - main
 
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Install SSH key
-#         uses: shimataro/ssh-key-action@v1
-#         with:
-#           private-key: ${{ secrets.SSH_KEY }}
-#           name: id_rsa
-#           known-hosts: ${{ secrets.KNOWN_HOSTS }}
-#           config: |
-#             Host *
-#               GSSAPIAuthentication no
-#       - name: run deploy script
-#         run: |
-#           chmod 600 ~/.ssh/id_rsa
-#           sudo ssh -o StrictHostKeyChecking=no -vvv -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v1
+        with:
+          private-key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: |
+            Host *
+              GSSAPIAuthentication no
+      - name: run deploy script
+        run: |
+          chmod 600 ~/.ssh/id_rsa
+        #   sudo ssh -o StrictHostKeyChecking=no -vvv -i ~/.ssh/id_rsa xs098000@xs098000.xsrv.jp -p 10022
