@@ -23,8 +23,8 @@
     <div class="Section__Image">
       <figure>
         <v-img
-          src="/wp-content/themes/ago-theme/static/regular_concert.jpg"
-          lazy-src="/wp-content/themes/ago-theme/static/regular_concert.jpg"
+          src="/wp-content/themes/ago-theme/static/about/regular_concert.jpg"
+          lazy-src="/wp-content/themes/ago-theme/static/about/regular_concert.jpg"
           alt="定期演奏会の様子"
         />
         <figcaption>(定期演奏会の様子)</figcaption>
@@ -47,8 +47,8 @@
     <div class="Section__Image">
       <figure>
         <v-img
-          src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
-          lazy-src="https://aoyamaorchestra.com/wp-content/themes/vuejs-wordpress-theme-starter/src/assets/img/AoM_10.jpg"
+          src="/wp-content/themes/ago-theme/static/about/messiah.jpg"
+          lazy-src="/wp-content/themes/ago-theme/static/about/messiah.jpg"
           alt="メサイア公演の様子"
         />
         <figcaption class="white--text">(メサイア公演の様子)</figcaption>
@@ -72,8 +72,8 @@
     <div class="Section__Image">
       <figure>
         <v-img
-          src="/wp-content/themes/ago-theme/static/ensemble.jpg"
-          lazy-src="/wp-content/themes/ago-theme/static/ensemble.jpg"
+          src="/wp-content/themes/ago-theme/static/about/ensemble.jpg"
+          lazy-src="/wp-content/themes/ago-theme/static/about/ensemble.jpg"
           alt="部内アンサンブル大会の様子"
         />
         <figcaption class="white--text">
