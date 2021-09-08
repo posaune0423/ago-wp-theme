@@ -13,19 +13,19 @@
       <p class="NotFound__Body">
         お探しのページは一時的にアクセスができない状況にあるか、移動もしくは削除された可能性があります。
       </p>
-      <button path="/" text="TOPに戻る" />
+      <link-button path="/" text="TOPに戻る" />
     </div>
   </div>
 </template>
 
 <script>
 import LowerHeader from '@/components/molecules/LowerHeader';
-import Button from '@/components/molecules/Button';
+import LinkButton from '@/components/molecules/LinkButton';
 
 export default {
   components: {
     LowerHeader,
-    Button
+    LinkButton
   },
   head: {
     title: function() {

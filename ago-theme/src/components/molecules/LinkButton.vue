@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Button',
+  name: 'LinkButton',
   props: ['path', 'text']
 };
 </script>

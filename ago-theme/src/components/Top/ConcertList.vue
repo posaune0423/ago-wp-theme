@@ -12,21 +12,21 @@
         :concert="concert"
       />
     </div>
-    <button path="/concerts/" text="VIEW MORE" />
+    <link-button path="/concerts/" text="VIEW MORE" />
   </section>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
 import ConcertCard from '@/components/Concerts/Card';
-import Button from '@/components/molecules/Button';
+import LinkButton from '@/components/molecules/LinkButton';
 
 export default {
   name: 'TopConcertList',
   components: {
     SectionTitle,
     ConcertCard,
-    Button
+    LinkButton
   },
   computed: {
     topConcerts() {

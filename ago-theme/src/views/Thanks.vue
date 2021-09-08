@@ -11,19 +11,19 @@
         この度は青山学院管弦楽団へお問い合わせいただき、ありがとうございます。<br />
         お問い合わせ内容を確認の上、担当者より連絡いたしますので、少々お待ちください。
       </p>
-      <button path="/" text="TOPに戻る" />
+      <link-button path="/" text="TOPに戻る" />
     </div>
   </div>
 </template>
 
 <script>
 import LowerHeader from '@/components/molecules/LowerHeader';
-import Button from '@/components/molecules/Button';
+import LinkButton from '@/components/molecules/LinkButton';
 
 export default {
   components: {
     LowerHeader,
-    Button
+    LinkButton
   },
   head: {
     title: function() {
