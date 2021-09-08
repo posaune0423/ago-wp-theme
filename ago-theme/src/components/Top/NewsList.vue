@@ -4,13 +4,13 @@
     <div class="NewsCard__Container">
       <news-card v-for="news in topNews" :key="news.id" :post="news" />
     </div>
-    <view-more-btn path="/news/" />
+    <button path="/news/" text="VIEW MORE" />
   </section>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
-import ViewMoreBtn from '@/components/molecules/ViewMoreBtn';
+import Button from '@/components/molecules/Button';
 import NewsCard from '@/components/News/Card';
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
     SectionTitle,
     NewsCard,
-    ViewMoreBtn
+    Button
   },
   computed: {
     topNews() {

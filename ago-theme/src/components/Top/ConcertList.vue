@@ -12,21 +12,21 @@
         :concert="concert"
       />
     </div>
-    <view-more-btn path="/concerts/" />
+    <button path="/concerts/" text="VIEW MORE" />
   </section>
 </template>
 
 <script>
 import SectionTitle from '@/components/molecules/SectionTitle';
 import ConcertCard from '@/components/Concerts/Card';
-import ViewMoreBtn from '@/components/molecules/ViewMoreBtn';
+import Button from '@/components/molecules/Button';
 
 export default {
   name: 'TopConcertList',
   components: {
     SectionTitle,
     ConcertCard,
-    ViewMoreBtn
+    Button
   },
   computed: {
     topConcerts() {
