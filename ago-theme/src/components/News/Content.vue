@@ -1,5 +1,5 @@
 <template>
-  <div class="post_content__container" v-html="content"></div>
+  <div class="NewsDetail__Content" v-html="content"></div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.post_content__container {
+.NewsDetail__Content {
   padding: 1rem;
 }
 </style>

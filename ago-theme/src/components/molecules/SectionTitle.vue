@@ -1,8 +1,8 @@
 <template>
-  <div class="Section__Title__Container">
-    <h2 class="Section__Title">
-      <span class="Section__Title__Body">{{ title }}</span>
-      <span class="Section__Title__Subtitle">{{ subtitle }}</span>
+  <div class="SectionTitle__Container">
+    <h2 class="SectionTitle">
+      <span class="SectionTitle__Body">{{ title }}</span>
+      <span class="SectionTitle__Subtitle">{{ subtitle }}</span>
     </h2>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Section__Title {
+.SectionTitle {
   position: relative;
   display: flex;
   flex-direction: column;

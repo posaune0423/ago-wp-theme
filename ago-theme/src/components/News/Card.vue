@@ -7,7 +7,7 @@
       height="200px"
     ></v-img>
 
-    <v-card-title class="newsCard__title">
+    <v-card-title class="newsCard__Title">
       {{ post.title.rendered }}
     </v-card-title>
 
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.newsCard__title {
+.newsCard__Title {
   word-break: break-word;
 }
 </style>
