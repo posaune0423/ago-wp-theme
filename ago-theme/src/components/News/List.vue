@@ -16,7 +16,7 @@
         :post="post"
       />
     </div>
-    <pager :next="next" :prev="prev" parent="news" />
+    <pager v-if="prev || next" :next="next" :prev="prev" parent="news" />
   </div>
 </template>
 
