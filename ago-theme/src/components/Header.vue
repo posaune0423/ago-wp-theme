@@ -12,8 +12,12 @@
         <li><router-link to="/concerts/">CONCERTS</router-link></li>
         <li><router-link to="/instructors/">INSTRUCTORS</router-link></li>
         <li><router-link to="/contact/">CONTACT</router-link></li>
+        <li><router-link to="/search/">SEARCH</router-link></li>
       </ul>
       <span class="Header__Menu">
+        <router-link to="/search/" class="Header__Menu__SearchIcon">
+          <v-icon color="black">mdi-magnify</v-icon>
+        </router-link>
         <menu-button />
       </span>
     </nav>
@@ -50,18 +54,18 @@ export default {
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 16px 0 0;
   box-sizing: border-box;
   z-index: 1;
 
   a {
-    padding-left: 16px;
-    padding-right: 32px;
     color: #343434;
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
   }
+
   ul {
     display: flex;
     list-style: none;
@@ -72,6 +76,8 @@ export default {
   }
   li {
     a {
+      padding-left: 16px;
+      padding-right: 32px;
       &:hover {
         text-decoration: none;
         opacity: 0.7;
@@ -98,6 +104,11 @@ export default {
   color: white;
   background: #fff;
 
+  a {
+    padding-left: 16px;
+    padding-right: 32px;
+  }
+
   @include pc-screen() {
     padding: 0 32px;
     img {
@@ -105,7 +116,6 @@ export default {
     }
   }
   @include sp-screen() {
-    padding-top: 10px;
     padding-right: 0;
     img {
       height: 40px;
@@ -114,7 +124,6 @@ export default {
 }
 
 .Header__Menu {
-  padding-top: 5px;
   height: 100%;
   line-height: 1;
   font-size: 28px;
@@ -130,9 +139,10 @@ export default {
 
   @include sp-screen() {
     display: flex;
-    a {
-      padding-bottom: 10px;
-    }
   }
+}
+
+.Header__Menu__SearchIcon {
+  margin-right: 1.4rem;
 }
 </style>
