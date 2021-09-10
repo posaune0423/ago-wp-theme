@@ -53,7 +53,6 @@ export default {
 <style lang="scss">
 .Footer {
   background-color: #eceae6;
-  padding: 2rem;
   color: $c_black-light;
   display: flex;
   a {
@@ -113,6 +112,9 @@ export default {
 }
 
 @include pc-screen() {
+  .Footer {
+    padding: 2rem 4rem;
+  }
   .Footer__Left {
     flex: 1;
     border-right: 0;
@@ -124,6 +126,9 @@ export default {
   footer {
     flex-direction: column;
     text-align: center;
+  }
+  .Footer {
+    padding: 2rem;
   }
   .Footer__Left {
     flex: 1;
