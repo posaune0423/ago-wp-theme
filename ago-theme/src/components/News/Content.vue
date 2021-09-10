@@ -9,8 +9,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .NewsDetail__Content {
   padding: 1rem;
+  .wp-block-image {
+    img {
+      height: auto !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+  }
 }
 </style>
