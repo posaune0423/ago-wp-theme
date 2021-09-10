@@ -44,6 +44,10 @@ export default new Router({
       component: () => import('@/views/Thanks')
     },
     {
+      path: '/search/',
+      component: () => import('@/views/Search')
+    },
+    {
       path: '*',
       component: () => import('@/views/404')
     }
