@@ -4,6 +4,23 @@
     <div class="Search__OuterWrap">
       <div class="Search__Wrap">
         <search-box />
+        <div class="Search__Result" v-if="results.length">
+          <v-skeleton-loader
+            v-for="i in 6"
+            v-show="loading"
+            :key="i"
+            class="mx-auto"
+            width="344"
+            type="card"
+          ></v-skeleton-loader>
+          <post-card
+            v-for="result in results"
+            v-show="!loading"
+            :key="result.id"
+            :post="result"
+          />
+        </div>
+        <pager v-if="prev || next" :next="next" :prev="prev" parent="news" />
       </div>
     </div>
   </div>
@@ -11,17 +28,21 @@
 
 <script>
 import LowerHeader from '@/components/molecules/LowerHeader';
+import PostCard from '@/components/News/Card';
 import SearchBox from '@/components/Search/SearchBox';
+import Pager from '@/components/molecules/Pager';
 
 export default {
   name: 'SearchPage',
   components: {
     LowerHeader,
-    SearchBox
+    SearchBox,
+    Pager,
+    PostCard
   },
   data() {
     return {
-      posts: [],
+      results: [],
       current: this.$route.query.page || 1,
       prev: null,
       next: null,
@@ -38,8 +59,7 @@ export default {
       this.$axios
         .get(`wp/v2/posts?search=${q}&per_page=${limit}&page=${page}`)
         .then((res) => {
-          this.posts = res.data;
-          console.log(this.posts);
+          this.results = res.data;
           this.current = page;
           this.makePagination(res);
         });
@@ -60,14 +80,26 @@ export default {
       this.next = null;
     }
   },
-  watch: {
-    $route: function() {
+  mounted() {
+    if (this.$route.query.q) {
       this.$store
         .dispatch('loader/startLoad')
         .then(() =>
           this.getPosts(this.$route.query.page || 1, 6, this.$route.query.q)
         )
         .then(() => this.$store.dispatch('loader/endLoad'));
+    }
+  },
+  watch: {
+    $route: function() {
+      if (this.$route.query.q) {
+        this.$store
+          .dispatch('loader/startLoad')
+          .then(() =>
+            this.getPosts(this.$route.query.page || 1, 6, this.$route.query.q)
+          )
+          .then(() => this.$store.dispatch('loader/endLoad'));
+      }
     }
   },
   head: {
@@ -96,7 +128,13 @@ export default {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
-    padding-bottom: 30vh;
+    // padding-bottom: 30vh;
   }
+}
+
+.Search__Result {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 2rem;
 }
 </style>
