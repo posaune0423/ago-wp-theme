@@ -1,5 +1,6 @@
 <template>
   <v-text-field
+    class="SearchBox"
     solo
     label="キーワードを入力..."
     type="search"
@@ -30,3 +31,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.SearchBox {
+  width: 80%;
+  margin: 0 auto;
+}
+</style>
