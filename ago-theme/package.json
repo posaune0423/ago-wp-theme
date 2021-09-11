@@ -19,6 +19,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-head": "^2.2.0",
+    "vue-progressbar": "^0.7.5",
     "vue-router": "^3.5.2",
     "vuelidate": "^0.7.6",
     "vuetify": "^2.5.6",
