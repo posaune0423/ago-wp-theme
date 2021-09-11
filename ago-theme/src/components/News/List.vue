@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="newsList__container">
+    <div class="NewsList__Container">
       <v-skeleton-loader
         v-for="i in 6"
         v-show="loading"
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.newsList__container {
+.NewsList__Container {
   flex-wrap: wrap;
   display: flex;
   gap: 2rem;
