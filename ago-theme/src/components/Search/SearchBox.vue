@@ -1,5 +1,5 @@
 <template>
-  <form class="SearchBox">
+  <form class="SearchBox" @submit.prevent>
     <v-text-field
       v-model="searchQuery"
       solo
