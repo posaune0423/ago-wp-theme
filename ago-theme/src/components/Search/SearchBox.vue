@@ -2,6 +2,7 @@
   <v-text-field
     solo
     label="Search Post..."
+    type="search"
     @keypress.enter="search"
     v-model="searchQuery"
   >
