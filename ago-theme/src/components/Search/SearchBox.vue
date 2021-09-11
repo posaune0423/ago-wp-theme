@@ -26,6 +26,10 @@ export default {
   methods: {
     search() {
       if (this.searchQuery.replace(/ |　/g, '')) {
+        const activeElement = document.activeElement;
+        if (activeElement) {
+          activeElement.blur();
+        }
         this.$router.push(`/search?q=${this.searchQuery}`);
       }
     }
