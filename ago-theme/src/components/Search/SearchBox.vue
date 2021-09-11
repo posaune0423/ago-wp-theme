@@ -39,7 +39,12 @@ export default {
 
 <style lang="scss" scoped>
 .SearchBox {
-  width: 80%;
+  @include pc-screen() {
+    width: 40%;
+  }
+  @include sp-screen() {
+    width: 80%;
+  }
   margin: 0 auto;
 }
 </style>
