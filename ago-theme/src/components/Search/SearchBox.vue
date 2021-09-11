@@ -1,18 +1,19 @@
 <template>
-  <v-text-field
-    v-model="searchQuery"
-    class="SearchBox"
-    solo
-    label="キーワードを入力..."
-    type="search"
-    @keypress.enter="search"
-  >
-    <template v-slot:append>
-      <v-icon @click="search">
-        mdi-magnify
-      </v-icon>
-    </template>
-  </v-text-field>
+  <form class="SearchBox">
+    <v-text-field
+      v-model="searchQuery"
+      solo
+      label="キーワードを入力..."
+      type="search"
+      @keypress.enter="search"
+    >
+      <template v-slot:append>
+        <v-icon @click="search">
+          mdi-magnify
+        </v-icon>
+      </template>
+    </v-text-field>
+  </form>
 </template>
 
 <script>
