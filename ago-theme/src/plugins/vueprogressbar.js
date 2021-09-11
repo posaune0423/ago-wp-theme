@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import VueProgressBar from 'vue-progressbar';
 
 const options = {

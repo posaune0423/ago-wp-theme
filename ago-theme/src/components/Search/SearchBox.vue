@@ -1,11 +1,11 @@
 <template>
   <v-text-field
+    v-model="searchQuery"
     class="SearchBox"
     solo
     label="キーワードを入力..."
     type="search"
     @keypress.enter="search"
-    v-model="searchQuery"
   >
     <template v-slot:append>
       <v-icon @click="search">

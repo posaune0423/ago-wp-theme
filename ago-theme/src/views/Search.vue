@@ -4,7 +4,7 @@
     <div class="Search__OuterWrap">
       <div class="Search__Wrap">
         <search-box />
-        <div class="Search__Result" v-if="results.length">
+        <div v-if="results.length" class="Search__Result">
           <v-skeleton-loader
             v-for="i in 6"
             v-show="loading"
@@ -29,19 +29,17 @@
 import LowerHeader from '@/components/molecules/LowerHeader';
 import PostCard from '@/components/News/Card';
 import SearchBox from '@/components/Search/SearchBox';
-import Pager from '@/components/molecules/Pager';
 
 export default {
   name: 'SearchPage',
   components: {
     LowerHeader,
     SearchBox,
-    Pager,
     PostCard
   },
   data() {
     return {
-      results: [],
+      results: []
     };
   },
   computed: {
@@ -58,15 +56,13 @@ export default {
           this.current = page;
           this.makePagination(res);
         });
-    },
+    }
   },
   mounted() {
     if (this.$route.query.q) {
       this.$store
         .dispatch('loader/startLoad')
-        .then(() =>
-          this.getPosts(this.$route.query.q)
-        )
+        .then(() => this.getPosts(this.$route.query.q))
         .then(() => this.$store.dispatch('loader/endLoad'));
     }
   },
@@ -75,9 +71,7 @@ export default {
       if (this.$route.query.q) {
         this.$store
           .dispatch('loader/startLoad')
-          .then(() =>
-            this.getPosts(this.$route.query.q)
-          )
+          .then(() => this.getPosts(this.$route.query.q))
           .then(() => this.$store.dispatch('loader/endLoad'));
       }
     }
