@@ -16,6 +16,7 @@
       ></v-text-field>
       <v-text-field
         v-model="email"
+        type="email"
         color="success"
         class="my-6 py-4"
         :error-messages="emailErrors"
