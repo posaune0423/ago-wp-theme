@@ -20,7 +20,6 @@
             :post="result"
           />
         </div>
-        <pager v-if="prev || next" :next="next" :prev="prev" parent="news" />
       </div>
     </div>
   </div>
@@ -43,10 +42,6 @@ export default {
   data() {
     return {
       results: [],
-      current: this.$route.query.page || 1,
-      prev: null,
-      next: null,
-      total: null
     };
   },
   computed: {
@@ -55,7 +50,7 @@ export default {
     }
   },
   methods: {
-    async getPosts(page = 1, limit = 6, q = '') {
+    async getPosts(q = '', page = 1, limit = 6) {
       this.$axios
         .get(`wp/v2/posts?search=${q}&per_page=${limit}&page=${page}`)
         .then((res) => {
@@ -63,29 +58,14 @@ export default {
           this.current = page;
           this.makePagination(res);
         });
-    }
-  },
-  makePagination(data) {
-    this.total = data.headers['x-wp-totalpages'];
-    //set up prev page
-    if (this.current > 1) {
-      this.prev = parseInt(this.current) - 1;
-    } else {
-      this.prev = null;
-    }
-    //set up next page
-    if (this.current != this.total) {
-      this.next = parseInt(this.current) + 1;
-    } else {
-      this.next = null;
-    }
+    },
   },
   mounted() {
     if (this.$route.query.q) {
       this.$store
         .dispatch('loader/startLoad')
         .then(() =>
-          this.getPosts(this.$route.query.page || 1, 6, this.$route.query.q)
+          this.getPosts(this.$route.query.q)
         )
         .then(() => this.$store.dispatch('loader/endLoad'));
     }
@@ -96,7 +76,7 @@ export default {
         this.$store
           .dispatch('loader/startLoad')
           .then(() =>
-            this.getPosts(this.$route.query.page || 1, 6, this.$route.query.q)
+            this.getPosts(this.$route.query.q)
           )
           .then(() => this.$store.dispatch('loader/endLoad'));
       }
@@ -125,8 +105,6 @@ export default {
     padding: 6rem 9rem;
   }
   @include sp-screen() {
-    padding-left: 2rem;
-    padding-right: 2rem;
     padding-top: 1rem;
     // padding-bottom: 30vh;
   }
