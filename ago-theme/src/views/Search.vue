@@ -53,8 +53,6 @@ export default {
         .get(`wp/v2/posts?search=${q}&per_page=${limit}&page=${page}`)
         .then((res) => {
           this.results = res.data;
-          this.current = page;
-          this.makePagination(res);
         });
     }
   },
