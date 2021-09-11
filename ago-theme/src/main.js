@@ -6,11 +6,11 @@ import vuetify from './plugins/vuetify';
 import axios from './plugins/axios';
 import './plugins/vuelidate';
 import './plugins/vuehead';
+import './plugins/vueprogressbar';
 
 require('@/assets/styles/base.scss');
 
 Vue.config.productionTip = false;
-
 if (process.env.NODE_ENV === 'production') {
   Vue.config.devtools = false;
 }

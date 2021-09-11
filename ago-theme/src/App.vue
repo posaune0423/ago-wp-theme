@@ -2,7 +2,8 @@
   <v-app>
     <the-header />
     <v-main>
-      <router-view></router-view>
+      <progress-bar />
+      <router-view />
     </v-main>
     <the-footer />
   </v-app>
@@ -11,13 +12,15 @@
 <script>
 import TheHeader from '@/components/Header';
 import TheFooter from '@/components/Footer';
+import ProgressBar from '@/components/molecules/ProgressBar';
 import { mapMutations } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    ProgressBar
   },
   methods: {
     ...mapMutations('menu', ['closeMenu'])
