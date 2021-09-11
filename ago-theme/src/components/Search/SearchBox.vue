@@ -1,7 +1,7 @@
 <template>
   <v-text-field
     solo
-    label="Search Post..."
+    label="キーワードを入力..."
     type="search"
     @keypress.enter="search"
     v-model="searchQuery"
