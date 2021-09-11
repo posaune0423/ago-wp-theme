@@ -20,6 +20,9 @@
             :post="result"
           />
         </div>
+        <div v-if="!results.length && searched" class="Search__NotFound">
+          <h3>{{ this.$route.query.q }} の検索結果が見つかりませんでした</h3>
+        </div>
       </div>
     </div>
   </div>
@@ -39,7 +42,8 @@ export default {
   },
   data() {
     return {
-      results: []
+      results: [],
+      searched: false
     };
   },
   computed: {
@@ -53,6 +57,7 @@ export default {
         .get(`wp/v2/posts?search=${q}&per_page=${limit}&page=${page}`)
         .then((res) => {
           this.results = res.data;
+          this.searched = true;
         });
     }
   },
@@ -87,24 +92,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Search__OuterWrap {
-  background-color: $c_gray-light;
-  padding: 2rem 0;
-}
-
-.Search__Wrap {
-  @include pc-screen() {
-    padding: 6rem 9rem;
+.Search {
+  &__OuterWrap {
+    background-color: $c_gray-light;
+    padding: 2rem 0;
   }
-  @include sp-screen() {
-    padding-top: 1rem;
-    // padding-bottom: 30vh;
+  &__Wrap {
+    @include pc-screen() {
+      padding: 6rem 9rem;
+    }
+    @include sp-screen() {
+      padding-top: 1rem;
+      // padding-bottom: 30vh;
+    }
   }
-}
-
-.Search__Result {
-  flex-wrap: wrap;
-  display: flex;
-  gap: 2rem;
+  &__Result {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+  }
+  &__NotFound {
+    text-align: center;
+    padding: 1rem;
+    @include pc-screen() {
+      font-size: 2rem;
+    }
+    @include sp-screen() {
+      font-size: 0.8rem;
+    }
+  }
 }
 </style>
