@@ -23,13 +23,13 @@ export default {
 .LowerHeader {
   margin-top: $h_header;
   position: relative;
+  overflow: hidden;
 
   @include pc-screen {
     padding-right: 2rem;
     padding-left: 4rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    overflow: hidden;
   }
   @include sp-screen {
     padding-right: 1rem;
@@ -61,17 +61,19 @@ export default {
     }
   }
   &__BgText {
+    color: #fff;
+    -webkit-text-stroke: 2px #cfcfcf;
+    position: absolute;
+    opacity: 0.3;
     @include pc-screen {
       font-size: 14rem;
       top: 1.8rem;
       left: 31vw;
-      color: #fff;
-      -webkit-text-stroke: 2px #cfcfcf;
-      position: absolute;
-      opacity: 0.3;
     }
     @include sp-screen {
-      display: none;
+      font-size: 5.6rem;
+      top: 1rem;
+      left: 21vw;
     }
   }
 }
