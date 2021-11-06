@@ -21,14 +21,9 @@ export default {
     YoutubeArea,
     HeroArea
   },
-  methods: {
-    setupTopPage() {
-      this.$store.dispatch('news/fetchNews');
-      this.$store.dispatch('concerts/fetchConcerts');
-    }
-  },
-  mounted() {
-    this.setupTopPage();
+  async mounted() {
+    this.$store.dispatch('news/fetchNews');
+    this.$store.dispatch('concerts/fetchConcerts');
   },
   head: {
     title: function() {

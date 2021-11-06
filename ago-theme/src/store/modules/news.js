@@ -13,6 +13,7 @@ const mutations = {
     state.news = news;
   }
 };
+
 const actions = {
   async fetchNews(context, page = 1, limit = 3) {
     $axios.get(`wp/v2/posts?per_page=${limit}&page=${page}`).then((res) => {
